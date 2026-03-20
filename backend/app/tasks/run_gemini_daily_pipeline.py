@@ -163,10 +163,20 @@ def generate_embedding(
         "output_dimensionality": output_dimensionality,
     }
     response = call_gemini_api(api_key, model, "embedContent", payload)
-    embeddings = response.get("embeddings", [])
-    if not embeddings:
-        raise RuntimeError(f"Gemini embedding response did not contain embeddings: {response}")
-    values = embeddings[0].get("values", [])
+    values: list[float] = []
+
+    # Gemini embedContent may return either:
+    # - {"embedding": {"values": [...]}} for a single input
+    # - {"embeddings": [{"values": [...]}]} for multiple inputs
+    embedding_obj = response.get("embedding")
+    if isinstance(embedding_obj, dict):
+        values = embedding_obj.get("values", []) or []
+
+    if not values:
+        embeddings = response.get("embeddings", [])
+        if embeddings:
+            values = embeddings[0].get("values", []) or []
+
     if not values:
         raise RuntimeError(f"Gemini embedding response did not contain values: {response}")
     return values, response

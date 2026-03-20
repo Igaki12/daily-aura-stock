@@ -1,0 +1,62 @@
+[
+  {
+    "market_effective_date_jst": "2025-06-23",
+    "input_path": "backend/data/llm_inputs/2025-06-22_2025-06-28/2025-06-23.txt",
+    "summary_path": "backend/data/gemini_outputs/2025-06-22_2025-06-28/2025-06-23/summary.txt",
+    "summary_model": "gemini-3-flash-preview",
+    "embedding_model": "gemini-embedding-001",
+    "output_dimensionality": 3072,
+    "summary_char_count": 770,
+    "embedding_vector_length": 3072
+  },
+  {
+    "market_effective_date_jst": "2025-06-24",
+    "input_path": "backend/data/llm_inputs/2025-06-22_2025-06-28/2025-06-24.txt",
+    "summary_path": "backend/data/gemini_outputs/2025-06-22_2025-06-28/2025-06-24/summary.txt",
+    "summary_model": "gemini-3-flash-preview",
+    "embedding_model": "gemini-embedding-001",
+    "output_dimensionality": 3072,
+    "summary_char_count": 821,
+    "embedding_vector_length": 3072
+  },
+  {
+    "market_effective_date_jst": "2025-06-25",
+    "input_path": "backend/data/llm_inputs/2025-06-22_2025-06-28/2025-06-25.txt",
+    "summary_path": "backend/data/gemini_outputs/2025-06-22_2025-06-28/2025-06-25/summary.txt",
+    "summary_model": "gemini-3-flash-preview",
+    "embedding_model": "gemini-embedding-001",
+    "output_dimensionality": 3072,
+    "summary_char_count": 951,
+    "embedding_vector_length": 3072
+  },
+  {
+    "market_effective_date_jst": "2025-06-26",
+    "input_path": "backend/data/llm_inputs/2025-06-22_2025-06-28/2025-06-26.txt",
+    "summary_path": "backend/data/gemini_outputs/2025-06-22_2025-06-28/2025-06-26/summary.txt",
+    "summary_model": "gemini-3-flash-preview",
+    "embedding_model": "gemini-embedding-001",
+    "output_dimensionality": 3072,
+    "summary_char_count": 857,
+    "embedding_vector_length": 3072
+  },
+  {
+    "market_effective_date_jst": "2025-06-27",
+    "input_path": "backend/data/llm_inputs/2025-06-22_2025-06-28/2025-06-27.txt",
+    "summary_path": "backend/data/gemini_outputs/2025-06-22_2025-06-28/2025-06-27/summary.txt",
+    "summary_model": "gemini-3-flash-preview",
+    "embedding_model": "gemini-embedding-001",
+    "output_dimensionality": 3072,
+    "summary_char_count": 793,
+    "embedding_vector_length": 3072
+  },
+  {
+    "market_effective_date_jst": "2025-06-30",
+    "input_path": "backend/data/llm_inputs/2025-06-22_2025-06-28/2025-06-30.txt",
+    "summary_path": "backend/data/gemini_outputs/2025-06-22_2025-06-28/2025-06-30/summary.txt",
+    "summary_model": "gemini-3-flash-preview",
+    "embedding_model": "gemini-embedding-001",
+    "output_dimensionality": 3072,
+    "summary_char_count": 753,
+    "embedding_vector_length": 3072
+  }
+]
