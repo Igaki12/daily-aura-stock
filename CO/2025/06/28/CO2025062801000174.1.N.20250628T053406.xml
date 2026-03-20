@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE NewsML PUBLIC "urn:newsml:iptc.org:20001006:NewsMLv1.0.dtd:1" "../DTD/NewsMLv1.0.dtd" [
+	<!ENTITY % NewsTextv1.0.dtd SYSTEM "../DTD/NewsTextv1.0.dtd">
+	%NewsTextv1.0.dtd;
+]>
+<NewsML>
+  <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+  <NewsEnvelope>
+    <TransmissionId>2025062801000174:20250628T053406+0900</TransmissionId>
+    <SentFrom>
+      <Party FormalName="KYODONEWS" Scheme="NskParty"/>
+    </SentFrom>
+    <SentTo>
+      <Party FormalName="47NewsSDB-NewsPack" Scheme="NskTiffServiceId"/>
+    </SentTo>
+    <DateAndTime>20250628T053406+0900</DateAndTime>
+    <NewsService FormalName="NewsContainer" Scheme="NewsCNewsPack"/>
+    <NewsService FormalName="NewsPack" Scheme="NewsCNewsPack"/>
+    <NewsService FormalName="CompactNews" Scheme="NewsCNewsPack"/>
+    <NewsProduct FormalName="NskNewsML:1" Scheme="NskNewsProduct"/>
+    <Priority FormalName="5" Scheme="IptcPriority"/>
+  </NewsEnvelope>
+  <NewsItem Duid="NI0001" xml:lang="ja-JP">
+    <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+    <Identification>
+      <NewsIdentifier>
+        <ProviderId>kyodonews.jp</ProviderId>
+        <DateId>20250628</DateId>
+        <NewsItemId>2025062801000174</NewsItemId>
+        <RevisionId PreviousRevision="0" Update="N">1</RevisionId>
+        <PublicIdentifier>urn:newsml:kyodonews.jp:20250628:2025062801000174:1</PublicIdentifier>
+      </NewsIdentifier>
+    </Identification>
+    <NewsManagement>
+      <NewsItemType FormalName="News" Scheme="IptcNewsItemType"/>
+      <FirstCreated>20250628T053406+0900</FirstCreated>
+      <ThisRevisionCreated>20250628T053406+0900</ThisRevisionCreated>
+      <Status FormalName="Usable" Scheme="IptcStatus"/>
+      <Instruction FormalName="CancelAll" Scheme="NewsCInstruction">
+        <RevisionStatus>
+          <Status FormalName="Canceled" Scheme="IptcStatus"/>
+        </RevisionStatus>
+      </Instruction>
+    </NewsManagement>
+    <NewsComponent Duid="NC0001" EquivalentsList="no" Essential="no" xml:lang="ja-JP">
+      <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+      <Role FormalName="Main" Scheme="IptcRole"/>
+      <NewsLines>
+        <HeadLine>コロナ起源解明「未確定」</HeadLine>
+        <SubHeadLine>ＷＨＯ、中国にデータ要請</SubHeadLine>
+        <CreditLine>KYODONEWS</CreditLine>
+        <CopyrightLine>(c)KYODONEWS</CopyrightLine>
+        <RightsLine>契約内容以外の使用を禁ずる。</RightsLine>
+      </NewsLines>
+      <AdministrativeMetadata>
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <Provider>
+          <Party FormalName="KYODONEWS" Scheme="NskParty"/>
+        </Provider>
+        <Creator>
+          <Party FormalName="KYODONEWS" Scheme="NskParty"/>
+        </Creator>
+      </AdministrativeMetadata>
+      <RightsMetadata>
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <Copyright>
+          <CopyrightHolder xml:lang="en-GB">KYODONEWS</CopyrightHolder>
+          <CopyrightDate xml:lang="ja-JP">2025年06月28日</CopyrightDate>
+        </Copyright>
+        <UsageRights>
+          <Limitations xml:lang="ja-JP">契約内容以外の使用を禁ずる。</Limitations>
+        </UsageRights>
+      </RightsMetadata>
+      <DescriptiveMetadata>
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <Language FormalName="ja" Scheme="ISO639"/>
+        <SubjectCode>
+          <Subject FormalName="07000000" Scheme="IptcSubjectCodes"/>
+          <SubjectMatter FormalName="07991000" Scheme="IptcSubjectCodes"/>
+        </SubjectCode>
+        <SubjectCode>
+          <Subject FormalName="07000000" Scheme="IptcSubjectCodes"/>
+          <SubjectMatter FormalName="07002000" Scheme="IptcSubjectCodes"/>
+        </SubjectCode>
+        <SubjectCode>
+          <Subject FormalName="03000000" Scheme="IptcSubjectCodes"/>
+          <SubjectMatter FormalName="03013000" Scheme="IptcSubjectCodes"/>
+        </SubjectCode>
+        <SubjectCode>
+          <Subject FormalName="06000000" Scheme="IptcSubjectCodes"/>
+          <SubjectMatter FormalName="06007000" Scheme="IptcSubjectCodes"/>
+          <SubjectDetail FormalName="06007991" Scheme="IptcSubjectCodes"/>
+        </SubjectCode>
+      </DescriptiveMetadata>
+      <Metadata>
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <MetadataType FormalName="NskAreaInformation" Scheme="NskMetadataTypes"/>
+        <Property FormalName="NskRelevantArea" Scheme="NskProperty">
+          <Property FormalName="NskCountry" Scheme="NskProperty" Value="CHN"/>
+        </Property>
+        <Property FormalName="NskRelevantArea" Scheme="NskProperty">
+          <Property FormalName="NskCountry" Scheme="NskProperty" Value="USA"/>
+        </Property>
+      </Metadata>
+      <Metadata>
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <MetadataType FormalName="CorporationInfo/NewsBrandInfo/NewsGenreInfo" Scheme="NewsCMetadataTypes"/>
+        <Property FormalName="NewsBrandInfo" Scheme="NewsCProperty">
+          <Property FormalName="NewsBrand" Scheme="NewsCProperty" Value="COMPACTNEWS"/>
+        </Property>
+        <Property FormalName="NewsGenreInfo" Scheme="NewsCProperty">
+          <Property FormalName="Science/Environment/Health" Scheme="NewsCProperty">
+            <Property FormalName="NewsGenre" Scheme="NewsCProperty" Value="health"/>
+          </Property>
+        </Property>
+      </Metadata>
+      <Metadata>
+        <MetadataType FormalName="GroupId" Scheme="NewsCMetadataTypes"/>
+        <Property FormalName="GroupId" Scheme="NewsCProperty" Value="20250627DH___0544500010"/>
+      </Metadata>
+      <ContentItem Duid="CI0001">
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <MediaType FormalName="Text" Scheme="IptcMediaTypes"/>
+        <Format FormalName="NewsTextv1.0" Scheme="NewsCFormats"/>
+        <MimeType FormalName="text/xml" Scheme="IptcMimeTypes"/>
+        <DataContent>
+          <news.catalog Href="../catalogNewsC/catalog.NewsCNewsTextCatalogv1.0.xml"/>
+          <newstext version="1.0" xml:space="preserve">
+            <body Duid="BD0001">
+              <news.content Duid="CO0001">
+                <p>　【ジュネーブ共同】世界保健機関（ＷＨＯ）の科学諮問団（ＳＡＧＯ）は２７日、新型コロナウイルスの起源に関する報告書を更新し、必要な情報と科学的なデータが入手できておらず「結論は未確定のままだ」と指摘した。最初の感染症例が報告された中国や個別の報告書を発表した米国に、データを提供するよう改めて要請した。</p>
+                <p>　報告書は、加盟国に情報提供を求めたがデータの原本は入手できていないと強調。野生動物から人への感染が有力視されるものの、具体的な感染経路や感染源は特定できず決定的ではないと指摘した。</p>
+                <p>　湖北省武漢市にある中国科学院武漢ウイルス研究所などでの偶発事故の可能性も、研究所職員の記録などの情報が提供されるまでは排除できないとした。</p>
+                <p>　また武漢市の海鮮市場で商品に触れた人への感染や、研究所での意図的な操作については、現時点で科学的な根拠がないと評価した。</p>
+                <p>　ＷＨＯのテドロス事務局長は２７日の記者会見で「全ての仮説を検討しなければならない。中国や他の国に情報を共有するよう引き続き訴える」と述べた。</p>
+              </news.content>
+            </body>
+          </newstext>
+        </DataContent>
+      </ContentItem>
+    </NewsComponent>
+  </NewsItem>
+</NewsML>

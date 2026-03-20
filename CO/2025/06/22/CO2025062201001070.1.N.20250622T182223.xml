@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE NewsML PUBLIC "urn:newsml:iptc.org:20001006:NewsMLv1.0.dtd:1" "../DTD/NewsMLv1.0.dtd" [
+	<!ENTITY % NewsTextv1.0.dtd SYSTEM "../DTD/NewsTextv1.0.dtd">
+	%NewsTextv1.0.dtd;
+]>
+<NewsML>
+  <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+  <NewsEnvelope>
+    <TransmissionId>2025062201001070:20250622T182223+0900</TransmissionId>
+    <SentFrom>
+      <Party FormalName="KYODONEWS" Scheme="NskParty"/>
+    </SentFrom>
+    <SentTo>
+      <Party FormalName="47NewsSDB-NewsPack" Scheme="NskTiffServiceId"/>
+    </SentTo>
+    <DateAndTime>20250622T182223+0900</DateAndTime>
+    <NewsService FormalName="NewsContainer" Scheme="NewsCNewsPack"/>
+    <NewsService FormalName="NewsPack" Scheme="NewsCNewsPack"/>
+    <NewsService FormalName="CompactNews" Scheme="NewsCNewsPack"/>
+    <NewsProduct FormalName="NskNewsML:1" Scheme="NskNewsProduct"/>
+    <Priority FormalName="5" Scheme="IptcPriority"/>
+  </NewsEnvelope>
+  <NewsItem Duid="NI0001" xml:lang="ja-JP">
+    <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+    <Identification>
+      <NewsIdentifier>
+        <ProviderId>kyodonews.jp</ProviderId>
+        <DateId>20250622</DateId>
+        <NewsItemId>2025062201001070</NewsItemId>
+        <RevisionId PreviousRevision="0" Update="N">1</RevisionId>
+        <PublicIdentifier>urn:newsml:kyodonews.jp:20250622:2025062201001070:1</PublicIdentifier>
+      </NewsIdentifier>
+    </Identification>
+    <NewsManagement>
+      <NewsItemType FormalName="News" Scheme="IptcNewsItemType"/>
+      <FirstCreated>20250622T182223+0900</FirstCreated>
+      <ThisRevisionCreated>20250622T182223+0900</ThisRevisionCreated>
+      <Status FormalName="Usable" Scheme="IptcStatus"/>
+      <Instruction FormalName="CancelAll" Scheme="NewsCInstruction">
+        <RevisionStatus>
+          <Status FormalName="Canceled" Scheme="IptcStatus"/>
+        </RevisionStatus>
+      </Instruction>
+    </NewsManagement>
+    <NewsComponent Duid="NC0001" EquivalentsList="no" Essential="no" xml:lang="ja-JP">
+      <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+      <Role FormalName="Main" Scheme="IptcRole"/>
+      <NewsLines>
+        <HeadLine>小倉涼、目標は連続２冠</HeadLine>
+        <SubHeadLine>「デフリンピック」空手の代表</SubHeadLine>
+        <CreditLine>KYODONEWS</CreditLine>
+        <CopyrightLine>(c)KYODONEWS</CopyrightLine>
+        <RightsLine>契約内容以外の使用を禁ずる。</RightsLine>
+      </NewsLines>
+      <AdministrativeMetadata>
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <Provider>
+          <Party FormalName="KYODONEWS" Scheme="NskParty"/>
+        </Provider>
+        <Creator>
+          <Party FormalName="KYODONEWS" Scheme="NskParty"/>
+        </Creator>
+      </AdministrativeMetadata>
+      <RightsMetadata>
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <Copyright>
+          <CopyrightHolder xml:lang="en-GB">KYODONEWS</CopyrightHolder>
+          <CopyrightDate xml:lang="ja-JP">2025年06月22日</CopyrightDate>
+        </Copyright>
+        <UsageRights>
+          <Limitations xml:lang="ja-JP">契約内容以外の使用を禁ずる。</Limitations>
+        </UsageRights>
+      </RightsMetadata>
+      <DescriptiveMetadata>
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <Language FormalName="ja" Scheme="ISO639"/>
+        <SubjectCode>
+          <Subject FormalName="05000000" Scheme="IptcSubjectCodes"/>
+          <SubjectMatter FormalName="05990000" Scheme="IptcSubjectCodes"/>
+        </SubjectCode>
+        <SubjectCode>
+          <Subject FormalName="15000000" Scheme="IptcSubjectCodes"/>
+          <SubjectMatter FormalName="15034000" Scheme="IptcSubjectCodes"/>
+        </SubjectCode>
+        <SubjectCode>
+          <Subject FormalName="07000000" Scheme="IptcSubjectCodes"/>
+          <SubjectMatter FormalName="07001000" Scheme="IptcSubjectCodes"/>
+        </SubjectCode>
+        <SubjectCode>
+          <Subject FormalName="15000000" Scheme="IptcSubjectCodes"/>
+          <SubjectMatter FormalName="15073000" Scheme="IptcSubjectCodes"/>
+        </SubjectCode>
+        <SubjectCode>
+          <Subject FormalName="04000000" Scheme="IptcSubjectCodes"/>
+          <SubjectMatter FormalName="04011000" Scheme="IptcSubjectCodes"/>
+          <SubjectDetail FormalName="04011991" Scheme="IptcSubjectCodes"/>
+        </SubjectCode>
+        <SubjectCode>
+          <Subject FormalName="14000000" Scheme="IptcSubjectCodes"/>
+          <SubjectMatter FormalName="14015000" Scheme="IptcSubjectCodes"/>
+        </SubjectCode>
+      </DescriptiveMetadata>
+      <Metadata>
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <MetadataType FormalName="NskAreaInformation" Scheme="NskMetadataTypes"/>
+        <Property FormalName="NskRelevantArea" Scheme="NskProperty">
+          <Property FormalName="NskCountry" Scheme="NskProperty" Value="BRA"/>
+        </Property>
+        <Property FormalName="NskRelevantArea" Scheme="NskProperty">
+          <Property FormalName="NskCountry" Scheme="NskProperty" Value="JPN"/>
+          <Property FormalName="NskJpnAreaCode" Scheme="NskProperty" Value="13000"/>
+        </Property>
+        <Property FormalName="NskRelevantArea" Scheme="NskProperty">
+          <Property FormalName="NskCountry" Scheme="NskProperty" Value="JPN"/>
+          <Property FormalName="NskJpnAreaCode" Scheme="NskProperty" Value="13117"/>
+        </Property>
+        <Property FormalName="NskRelevantArea" Scheme="NskProperty">
+          <Property FormalName="NskCountry" Scheme="NskProperty" Value="JPN"/>
+          <Property FormalName="NskJpnAreaCode" Scheme="NskProperty" Value="11000"/>
+        </Property>
+      </Metadata>
+      <Metadata>
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <MetadataType FormalName="KyodoCorporationInfo" Scheme="KydMetadataTypes"/>
+        <Property FormalName="CorporationInfo" Scheme="KydProperty">
+          <Property FormalName="Corporation" Scheme="KydProperty">
+            <Property FormalName="StockCode" Scheme="KydProperty" Value="2802"/>
+            <Property FormalName="Market" Scheme="KydProperty" Value="東証プライム"/>
+            <Property FormalName="Name" Scheme="KydProperty" Value="味の素"/>
+          </Property>
+        </Property>
+      </Metadata>
+      <Metadata>
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <MetadataType FormalName="CorporationInfo/NewsBrandInfo/NewsGenreInfo" Scheme="NewsCMetadataTypes"/>
+        <Property FormalName="NewsBrandInfo" Scheme="NewsCProperty">
+          <Property FormalName="NewsBrand" Scheme="NewsCProperty" Value="COMPACTNEWS"/>
+        </Property>
+        <Property FormalName="NewsGenreInfo" Scheme="NewsCProperty">
+          <Property FormalName="Sports" Scheme="NewsCProperty">
+            <Property FormalName="NewsGenre" Scheme="NewsCProperty" Value="worldgames"/>
+          </Property>
+        </Property>
+      </Metadata>
+      <Metadata>
+        <MetadataType FormalName="GroupId" Scheme="NewsCMetadataTypes"/>
+        <Property FormalName="GroupId" Scheme="NewsCProperty" Value="20250622DH___0362300022"/>
+      </Metadata>
+      <ContentItem Duid="CI0001">
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <MediaType FormalName="Text" Scheme="IptcMediaTypes"/>
+        <Format FormalName="NewsTextv1.0" Scheme="NewsCFormats"/>
+        <MimeType FormalName="text/xml" Scheme="IptcMimeTypes"/>
+        <DataContent>
+          <news.catalog Href="../catalogNewsC/catalog.NewsCNewsTextCatalogv1.0.xml"/>
+          <newstext version="1.0" xml:space="preserve">
+            <body Duid="BD0001">
+              <news.content Duid="CO0001">
+                <p>　１１月に東京を中心に開催される聴覚障害者の国際スポーツ大会「デフリンピック」の空手日本代表の内定証授与式が２２日、東京都北区の味の素ナショナルトレーニングセンターで行われ、２０２２年カシアスドスル大会（ブラジル）の女子で形と組手６１キロ級を制した小倉涼（埼玉・特別支援学校坂戸ろう学園教）は「目標は両種目の金メダル。挑戦者の気持ちで頑張りたい」と２大会連続の２冠へ決意を示した。</p>
+                <p>　現在は母校で教師を務め、デフリンピックは生徒も観戦予定という。「今回は東京で開催されるので、周りの皆さんの期待を背負って挑むつもり」と手話で意気込んだ。</p>
+              </news.content>
+            </body>
+          </newstext>
+        </DataContent>
+      </ContentItem>
+    </NewsComponent>
+  </NewsItem>
+</NewsML>

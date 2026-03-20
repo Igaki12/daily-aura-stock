@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE NewsML PUBLIC "urn:newsml:iptc.org:20001006:NewsMLv1.0.dtd:1" "../DTD/NewsMLv1.0.dtd" [
+	<!ENTITY % NewsTextv1.0.dtd SYSTEM "../DTD/NewsTextv1.0.dtd">
+	%NewsTextv1.0.dtd;
+]>
+<NewsML>
+  <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+  <NewsEnvelope>
+    <TransmissionId>2025062602000010:20250626T120037+0900</TransmissionId>
+    <SentFrom>
+      <Party FormalName="KYODONEWS" Scheme="NskParty"/>
+    </SentFrom>
+    <SentTo>
+      <Party FormalName="47NewsSDB-NewsPack" Scheme="NskTiffServiceId"/>
+    </SentTo>
+    <DateAndTime>20250626T120037+0900</DateAndTime>
+    <NewsService FormalName="NewsContainer" Scheme="NewsCNewsPack"/>
+    <NewsService FormalName="NewsPack" Scheme="NewsCNewsPack"/>
+    <NewsService FormalName="CompactNews" Scheme="NewsCNewsPack"/>
+    <NewsProduct FormalName="NskNewsML:1" Scheme="NskNewsProduct"/>
+    <Priority FormalName="5" Scheme="IptcPriority"/>
+  </NewsEnvelope>
+  <NewsItem Duid="NI0001" xml:lang="ja-JP">
+    <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+    <Identification>
+      <NewsIdentifier>
+        <ProviderId>kyodonews.jp</ProviderId>
+        <DateId>20250626</DateId>
+        <NewsItemId>2025062602000010</NewsItemId>
+        <RevisionId PreviousRevision="11" Update="N">12</RevisionId>
+        <PublicIdentifier>urn:newsml:kyodonews.jp:20250626:2025062602000010:12</PublicIdentifier>
+      </NewsIdentifier>
+    </Identification>
+    <NewsManagement>
+      <NewsItemType FormalName="News" Scheme="IptcNewsItemType"/>
+      <FirstCreated>20250626T030041+0900</FirstCreated>
+      <ThisRevisionCreated>20250626T120037+0900</ThisRevisionCreated>
+      <Status FormalName="Usable" Scheme="IptcStatus"/>
+      <Instruction FormalName="CancelAll" Scheme="NewsCInstruction">
+        <RevisionStatus>
+          <Status FormalName="Canceled" Scheme="IptcStatus"/>
+        </RevisionStatus>
+      </Instruction>
+    </NewsManagement>
+    <NewsComponent Duid="NC0001" EquivalentsList="no" Essential="no" xml:lang="ja-JP">
+      <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+      <Role FormalName="Main" Scheme="IptcRole"/>
+      <NewsLines>
+        <HeadLine>為替相場　　２６日（日本時間１２時）</HeadLine>
+        <CreditLine>KYODONEWS</CreditLine>
+        <CopyrightLine>(c)KYODONEWS</CopyrightLine>
+        <RightsLine>契約内容以外の使用を禁ずる。</RightsLine>
+      </NewsLines>
+      <AdministrativeMetadata>
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <Provider>
+          <Party FormalName="KYODONEWS" Scheme="NskParty"/>
+        </Provider>
+        <Creator>
+          <Party FormalName="KYODONEWS" Scheme="NskParty"/>
+        </Creator>
+      </AdministrativeMetadata>
+      <RightsMetadata>
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <Copyright>
+          <CopyrightHolder xml:lang="en-GB">KYODONEWS</CopyrightHolder>
+          <CopyrightDate xml:lang="ja-JP">2025年06月26日</CopyrightDate>
+        </Copyright>
+        <UsageRights>
+          <Limitations xml:lang="ja-JP">契約内容以外の使用を禁ずる。</Limitations>
+        </UsageRights>
+      </RightsMetadata>
+      <DescriptiveMetadata>
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <Language FormalName="ja" Scheme="ISO639"/>
+        <SubjectCode>
+          <Subject FormalName="04000000" Scheme="IptcSubjectCodes"/>
+          <SubjectMatter FormalName="04008000" Scheme="IptcSubjectCodes"/>
+          <SubjectDetail FormalName="04008006" Scheme="IptcSubjectCodes"/>
+        </SubjectCode>
+      </DescriptiveMetadata>
+      <Metadata>
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <MetadataType FormalName="NskAreaInformation" Scheme="NskMetadataTypes"/>
+        <Property FormalName="NskRelevantArea" Scheme="NskProperty">
+          <Property FormalName="NskCountry" Scheme="NskProperty" Value="JPN"/>
+        </Property>
+      </Metadata>
+      <Metadata>
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <MetadataType FormalName="CorporationInfo/NewsBrandInfo/NewsGenreInfo" Scheme="NewsCMetadataTypes"/>
+        <Property FormalName="NewsBrandInfo" Scheme="NewsCProperty">
+          <Property FormalName="NewsBrand" Scheme="NewsCProperty" Value="COMPACTNEWS"/>
+        </Property>
+        <Property FormalName="NewsGenreInfo" Scheme="NewsCProperty">
+          <Property FormalName="Economics" Scheme="NewsCProperty">
+            <Property FormalName="NewsGenre" Scheme="NewsCProperty" Value="exchange"/>
+          </Property>
+        </Property>
+      </Metadata>
+      <ContentItem Duid="CI0001">
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <MediaType FormalName="Text" Scheme="IptcMediaTypes"/>
+        <Format FormalName="NewsTextv1.0" Scheme="NewsCFormats"/>
+        <MimeType FormalName="text/xml" Scheme="IptcMimeTypes"/>
+        <DataContent>
+          <news.catalog Href="../catalogNewsC/catalog.NewsCNewsTextCatalogv1.0.xml"/>
+          <newstext version="1.0" xml:space="preserve">
+            <body Duid="BD0001">
+              <news.content Duid="CO0001">
+                <p>１２時現在　　　　　　　　　　</p>
+                <p>　１ドル＝　　　　　　　　　　</p>
+                <p>　　　１４４円６８銭～　　　　</p>
+                <p>　　　　　　１４４円６９銭　　</p>
+                <p>　　前日比　　＋０円６２銭　　</p>
+                <p>　１ユーロ＝　　　　　　　　　</p>
+                <p>　　　１６９円１２銭～　　　　</p>
+                <p>　　　　　　１６９円１９銭　　</p>
+                <p>　　前日比　　－０円５８銭　　</p>
+              </news.content>
+            </body>
+          </newstext>
+        </DataContent>
+      </ContentItem>
+    </NewsComponent>
+  </NewsItem>
+</NewsML>

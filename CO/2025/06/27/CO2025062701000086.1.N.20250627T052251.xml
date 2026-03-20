@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE NewsML PUBLIC "urn:newsml:iptc.org:20001006:NewsMLv1.0.dtd:1" "../DTD/NewsMLv1.0.dtd" [
+	<!ENTITY % NewsTextv1.0.dtd SYSTEM "../DTD/NewsTextv1.0.dtd">
+	%NewsTextv1.0.dtd;
+]>
+<NewsML>
+  <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+  <NewsEnvelope>
+    <TransmissionId>2025062701000086:20250627T052251+0900</TransmissionId>
+    <SentFrom>
+      <Party FormalName="KYODONEWS" Scheme="NskParty"/>
+    </SentFrom>
+    <SentTo>
+      <Party FormalName="47NewsSDB-NewsPack" Scheme="NskTiffServiceId"/>
+    </SentTo>
+    <DateAndTime>20250627T052251+0900</DateAndTime>
+    <NewsService FormalName="NewsContainer" Scheme="NewsCNewsPack"/>
+    <NewsService FormalName="NewsPack" Scheme="NewsCNewsPack"/>
+    <NewsService FormalName="CompactNews" Scheme="NewsCNewsPack"/>
+    <NewsProduct FormalName="NskNewsML:1" Scheme="NskNewsProduct"/>
+    <Priority FormalName="5" Scheme="IptcPriority"/>
+  </NewsEnvelope>
+  <NewsItem Duid="NI0001" xml:lang="ja-JP">
+    <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+    <Identification>
+      <NewsIdentifier>
+        <ProviderId>kyodonews.jp</ProviderId>
+        <DateId>20250627</DateId>
+        <NewsItemId>2025062701000086</NewsItemId>
+        <RevisionId PreviousRevision="0" Update="N">1</RevisionId>
+        <PublicIdentifier>urn:newsml:kyodonews.jp:20250627:2025062701000086:1</PublicIdentifier>
+      </NewsIdentifier>
+    </Identification>
+    <NewsManagement>
+      <NewsItemType FormalName="News" Scheme="IptcNewsItemType"/>
+      <FirstCreated>20250627T052251+0900</FirstCreated>
+      <ThisRevisionCreated>20250627T052251+0900</ThisRevisionCreated>
+      <Status FormalName="Usable" Scheme="IptcStatus"/>
+      <Instruction FormalName="CancelAll" Scheme="NewsCInstruction">
+        <RevisionStatus>
+          <Status FormalName="Canceled" Scheme="IptcStatus"/>
+        </RevisionStatus>
+      </Instruction>
+    </NewsManagement>
+    <NewsComponent Duid="NC0001" EquivalentsList="no" Essential="no" xml:lang="ja-JP">
+      <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+      <Role FormalName="Main" Scheme="IptcRole"/>
+      <NewsLines>
+        <HeadLine>被爆証言継承、支援のクラファン</HeadLine>
+        <SubHeadLine>ＮＰＯ法人</SubHeadLine>
+        <CreditLine>KYODONEWS</CreditLine>
+        <CopyrightLine>(c)KYODONEWS</CopyrightLine>
+        <RightsLine>契約内容以外の使用を禁ずる。</RightsLine>
+        <SeriesLine>戦後８０年</SeriesLine>
+      </NewsLines>
+      <AdministrativeMetadata>
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <Provider>
+          <Party FormalName="KYODONEWS" Scheme="NskParty"/>
+        </Provider>
+        <Creator>
+          <Party FormalName="KYODONEWS" Scheme="NskParty"/>
+        </Creator>
+      </AdministrativeMetadata>
+      <RightsMetadata>
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <Copyright>
+          <CopyrightHolder xml:lang="en-GB">KYODONEWS</CopyrightHolder>
+          <CopyrightDate xml:lang="ja-JP">2025年06月27日</CopyrightDate>
+        </Copyright>
+        <UsageRights>
+          <Limitations xml:lang="ja-JP">契約内容以外の使用を禁ずる。</Limitations>
+        </UsageRights>
+      </RightsMetadata>
+      <DescriptiveMetadata>
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <Language FormalName="ja" Scheme="ISO639"/>
+        <SubjectCode>
+          <Subject FormalName="14000000" Scheme="IptcSubjectCodes"/>
+          <SubjectMatter FormalName="14020000" Scheme="IptcSubjectCodes"/>
+        </SubjectCode>
+        <SubjectCode>
+          <Subject FormalName="11000000" Scheme="IptcSubjectCodes"/>
+          <SubjectMatter FormalName="11018000" Scheme="IptcSubjectCodes"/>
+        </SubjectCode>
+        <SubjectCode>
+          <Subject FormalName="01000000" Scheme="IptcSubjectCodes"/>
+          <SubjectMatter FormalName="01010000" Scheme="IptcSubjectCodes"/>
+        </SubjectCode>
+        <SubjectCode>
+          <Subject FormalName="01000000" Scheme="IptcSubjectCodes"/>
+          <SubjectMatter FormalName="01022000" Scheme="IptcSubjectCodes"/>
+        </SubjectCode>
+      </DescriptiveMetadata>
+      <Metadata>
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <MetadataType FormalName="NskAreaInformation" Scheme="NskMetadataTypes"/>
+        <Property FormalName="NskRelevantArea" Scheme="NskProperty">
+          <Property FormalName="NskCountry" Scheme="NskProperty" Value="JPN"/>
+          <Property FormalName="NskJpnAreaCode" Scheme="NskProperty" Value="13000"/>
+        </Property>
+      </Metadata>
+      <Metadata>
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <MetadataType FormalName="CorporationInfo/NewsBrandInfo/NewsGenreInfo" Scheme="NewsCMetadataTypes"/>
+        <Property FormalName="NewsBrandInfo" Scheme="NewsCProperty">
+          <Property FormalName="NewsBrand" Scheme="NewsCProperty" Value="COMPACTNEWS"/>
+        </Property>
+        <Property FormalName="NewsGenreInfo" Scheme="NewsCProperty">
+          <Property FormalName="National" Scheme="NewsCProperty">
+            <Property FormalName="NewsGenre" Scheme="NewsCProperty" Value="national"/>
+          </Property>
+        </Property>
+      </Metadata>
+      <Metadata>
+        <MetadataType FormalName="GroupId" Scheme="NewsCMetadataTypes"/>
+        <Property FormalName="GroupId" Scheme="NewsCProperty" Value="20250625DH___0487900010"/>
+      </Metadata>
+      <ContentItem Duid="CI0001">
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <MediaType FormalName="Text" Scheme="IptcMediaTypes"/>
+        <Format FormalName="NewsTextv1.0" Scheme="NewsCFormats"/>
+        <MimeType FormalName="text/xml" Scheme="IptcMimeTypes"/>
+        <DataContent>
+          <news.catalog Href="../catalogNewsC/catalog.NewsCNewsTextCatalogv1.0.xml"/>
+          <newstext version="1.0" xml:space="preserve">
+            <body Duid="BD0001">
+              <news.content Duid="CO0001">
+                <p>　ＮＰＯ法人「ノーモア・ヒバクシャ記憶遺産を継承する会」（東京）が、被爆証言を次世代へ継承する活動の支援を募るクラウドファンディング（ＣＦ）を始めた。同会は日本原水爆被害者団体協議会（被団協）の約７０年にわたる運動や被爆証言の資料などを保管。公開に向けて整理しているが、資金や人手が不足しているとして支援を求めている。</p>
+                <p>　月５００円、千円、３千円、５千円、１万円から寄付額を選べる。寄付は資料のデジタル化やアーカイブスの構築、研究会開催などに使う予定。募集は８月１５日まで。</p>
+                <p>　同会は作家の故大江健三郎さんらが発起人。</p>
+              </news.content>
+            </body>
+          </newstext>
+        </DataContent>
+      </ContentItem>
+    </NewsComponent>
+  </NewsItem>
+</NewsML>

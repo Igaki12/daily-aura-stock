@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE NewsML PUBLIC "urn:newsml:iptc.org:20001006:NewsMLv1.0.dtd:1" "../DTD/NewsMLv1.0.dtd" [
+	<!ENTITY % NewsTextv1.0.dtd SYSTEM "../DTD/NewsTextv1.0.dtd">
+	%NewsTextv1.0.dtd;
+]>
+<NewsML>
+  <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+  <NewsEnvelope>
+    <TransmissionId>2025062401002182:20250624T205213+0900</TransmissionId>
+    <SentFrom>
+      <Party FormalName="KYODONEWS" Scheme="NskParty"/>
+    </SentFrom>
+    <SentTo>
+      <Party FormalName="47NewsSDB-NewsPack" Scheme="NskTiffServiceId"/>
+    </SentTo>
+    <DateAndTime>20250624T205213+0900</DateAndTime>
+    <NewsService FormalName="NewsContainer" Scheme="NewsCNewsPack"/>
+    <NewsService FormalName="NewsPack" Scheme="NewsCNewsPack"/>
+    <NewsService FormalName="CompactNews" Scheme="NewsCNewsPack"/>
+    <NewsProduct FormalName="NskNewsML:1" Scheme="NskNewsProduct"/>
+    <Priority FormalName="5" Scheme="IptcPriority"/>
+  </NewsEnvelope>
+  <NewsItem Duid="NI0001" xml:lang="ja-JP">
+    <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+    <Identification>
+      <NewsIdentifier>
+        <ProviderId>kyodonews.jp</ProviderId>
+        <DateId>20250624</DateId>
+        <NewsItemId>2025062401002182</NewsItemId>
+        <RevisionId PreviousRevision="0" Update="N">1</RevisionId>
+        <PublicIdentifier>urn:newsml:kyodonews.jp:20250624:2025062401002182:1</PublicIdentifier>
+      </NewsIdentifier>
+    </Identification>
+    <NewsManagement>
+      <NewsItemType FormalName="News" Scheme="IptcNewsItemType"/>
+      <FirstCreated>20250624T205213+0900</FirstCreated>
+      <ThisRevisionCreated>20250624T205213+0900</ThisRevisionCreated>
+      <Status FormalName="Usable" Scheme="IptcStatus"/>
+      <Instruction FormalName="CancelAll" Scheme="NewsCInstruction">
+        <RevisionStatus>
+          <Status FormalName="Canceled" Scheme="IptcStatus"/>
+        </RevisionStatus>
+      </Instruction>
+    </NewsManagement>
+    <NewsComponent Duid="NC0001" EquivalentsList="no" Essential="no" xml:lang="ja-JP">
+      <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+      <Role FormalName="Main" Scheme="IptcRole"/>
+      <NewsLines>
+        <HeadLine>柳田選手、荒木氏ら１９人選任</HeadLine>
+        <SubHeadLine>バレーボール協会の新理事</SubHeadLine>
+        <CreditLine>KYODONEWS</CreditLine>
+        <CopyrightLine>(c)KYODONEWS</CopyrightLine>
+        <RightsLine>契約内容以外の使用を禁ずる。</RightsLine>
+      </NewsLines>
+      <AdministrativeMetadata>
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <Provider>
+          <Party FormalName="KYODONEWS" Scheme="NskParty"/>
+        </Provider>
+        <Creator>
+          <Party FormalName="KYODONEWS" Scheme="NskParty"/>
+        </Creator>
+      </AdministrativeMetadata>
+      <RightsMetadata>
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <Copyright>
+          <CopyrightHolder xml:lang="en-GB">KYODONEWS</CopyrightHolder>
+          <CopyrightDate xml:lang="ja-JP">2025年06月24日</CopyrightDate>
+        </Copyright>
+        <UsageRights>
+          <Limitations xml:lang="ja-JP">契約内容以外の使用を禁ずる。</Limitations>
+        </UsageRights>
+      </RightsMetadata>
+      <DescriptiveMetadata>
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <Language FormalName="ja" Scheme="ISO639"/>
+        <SubjectCode>
+          <Subject FormalName="15000000" Scheme="IptcSubjectCodes"/>
+          <SubjectMatter FormalName="15067000" Scheme="IptcSubjectCodes"/>
+        </SubjectCode>
+        <SubjectCode>
+          <Subject FormalName="15000000" Scheme="IptcSubjectCodes"/>
+          <SubjectMatter FormalName="15991000" Scheme="IptcSubjectCodes"/>
+        </SubjectCode>
+      </DescriptiveMetadata>
+      <Metadata>
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <MetadataType FormalName="NskAreaInformation" Scheme="NskMetadataTypes"/>
+        <Property FormalName="NskRelevantArea" Scheme="NskProperty">
+          <Property FormalName="NskCountry" Scheme="NskProperty" Value="JPN"/>
+          <Property FormalName="NskJpnAreaCode" Scheme="NskProperty" Value="13000"/>
+        </Property>
+      </Metadata>
+      <Metadata>
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <MetadataType FormalName="CorporationInfo/NewsBrandInfo/NewsGenreInfo" Scheme="NewsCMetadataTypes"/>
+        <Property FormalName="NewsBrandInfo" Scheme="NewsCProperty">
+          <Property FormalName="NewsBrand" Scheme="NewsCProperty" Value="COMPACTNEWS"/>
+        </Property>
+        <Property FormalName="NewsGenreInfo" Scheme="NewsCProperty">
+          <Property FormalName="Sports" Scheme="NewsCProperty">
+            <Property FormalName="NewsGenre" Scheme="NewsCProperty" Value="sports"/>
+          </Property>
+        </Property>
+      </Metadata>
+      <Metadata>
+        <MetadataType FormalName="GroupId" Scheme="NewsCMetadataTypes"/>
+        <Property FormalName="GroupId" Scheme="NewsCProperty" Value="20250624DH___0475700010"/>
+      </Metadata>
+      <ContentItem Duid="CI0001">
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <MediaType FormalName="Text" Scheme="IptcMediaTypes"/>
+        <Format FormalName="NewsTextv1.0" Scheme="NewsCFormats"/>
+        <MimeType FormalName="text/xml" Scheme="IptcMimeTypes"/>
+        <DataContent>
+          <news.catalog Href="../catalogNewsC/catalog.NewsCNewsTextCatalogv1.0.xml"/>
+          <newstext version="1.0" xml:space="preserve">
+            <body Duid="BD0001">
+              <news.content Duid="CO0001">
+                <p>　日本バレーボール協会は２４日、評議員会を開き、ＳＶリーグ男子の東京グレートベアーズに所属する元日本代表の柳田将洋選手（３２）や、女子で五輪４大会代表の荒木絵里香氏（４０）ら新理事１９人を選任した。当初は１３日の会合で理事を選出する予定だったが、先送りしていた。</p>
+                <p>　任期は２７年６月まで。川合俊一会長は２月の評議員会で、次期会長候補者として既に選任されていた。２５日の理事会で会長、副会長などの役職を決定する。</p>
+                <p>　関係者によると、評議員会は、国籍を変更して日本代表入りを目指していた海外出身選手を巡り、協会の対応に不備があったことを問題視。１３日は新理事選任の議案を「差し戻し」にした。</p>
+              </news.content>
+            </body>
+          </newstext>
+        </DataContent>
+      </ContentItem>
+    </NewsComponent>
+  </NewsItem>
+</NewsML>

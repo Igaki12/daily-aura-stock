@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE NewsML PUBLIC "urn:newsml:iptc.org:20001006:NewsMLv1.0.dtd:1" "../DTD/NewsMLv1.0.dtd" [
+	<!ENTITY % NewsTextv1.0.dtd SYSTEM "../DTD/NewsTextv1.0.dtd">
+	%NewsTextv1.0.dtd;
+]>
+<NewsML>
+  <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+  <NewsEnvelope>
+    <TransmissionId>2025062601002071:20250626T220320+0900</TransmissionId>
+    <SentFrom>
+      <Party FormalName="KYODONEWS" Scheme="NskParty"/>
+    </SentFrom>
+    <SentTo>
+      <Party FormalName="47NewsSDB-NewsPack" Scheme="NskTiffServiceId"/>
+    </SentTo>
+    <DateAndTime>20250626T220320+0900</DateAndTime>
+    <NewsService FormalName="NewsContainer" Scheme="NewsCNewsPack"/>
+    <NewsService FormalName="NewsPack" Scheme="NewsCNewsPack"/>
+    <NewsService FormalName="CompactNews" Scheme="NewsCNewsPack"/>
+    <NewsProduct FormalName="NskNewsML:1" Scheme="NskNewsProduct"/>
+    <Priority FormalName="5" Scheme="IptcPriority"/>
+  </NewsEnvelope>
+  <NewsItem Duid="NI0001" xml:lang="ja-JP">
+    <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+    <Identification>
+      <NewsIdentifier>
+        <ProviderId>kyodonews.jp</ProviderId>
+        <DateId>20250626</DateId>
+        <NewsItemId>2025062601002071</NewsItemId>
+        <RevisionId PreviousRevision="0" Update="N">1</RevisionId>
+        <PublicIdentifier>urn:newsml:kyodonews.jp:20250626:2025062601002071:1</PublicIdentifier>
+      </NewsIdentifier>
+    </Identification>
+    <NewsManagement>
+      <NewsItemType FormalName="News" Scheme="IptcNewsItemType"/>
+      <FirstCreated>20250626T220320+0900</FirstCreated>
+      <ThisRevisionCreated>20250626T220320+0900</ThisRevisionCreated>
+      <Status FormalName="Usable" Scheme="IptcStatus"/>
+      <Instruction FormalName="CancelAll" Scheme="NewsCInstruction">
+        <RevisionStatus>
+          <Status FormalName="Canceled" Scheme="IptcStatus"/>
+        </RevisionStatus>
+      </Instruction>
+    </NewsManagement>
+    <NewsComponent Duid="NC0001" EquivalentsList="no" Essential="no" xml:lang="ja-JP">
+      <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+      <Role FormalName="Main" Scheme="IptcRole"/>
+      <NewsLines>
+        <HeadLine>小学校近くで通行人はねる</HeadLine>
+        <SubHeadLine>北京、子ども倒れる動画</SubHeadLine>
+        <CreditLine>KYODONEWS</CreditLine>
+        <CopyrightLine>(c)KYODONEWS</CopyrightLine>
+        <RightsLine>契約内容以外の使用を禁ずる。</RightsLine>
+      </NewsLines>
+      <AdministrativeMetadata>
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <Provider>
+          <Party FormalName="KYODONEWS" Scheme="NskParty"/>
+        </Provider>
+        <Creator>
+          <Party FormalName="KYODONEWS" Scheme="NskParty"/>
+        </Creator>
+      </AdministrativeMetadata>
+      <RightsMetadata>
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <Copyright>
+          <CopyrightHolder xml:lang="en-GB">KYODONEWS</CopyrightHolder>
+          <CopyrightDate xml:lang="ja-JP">2025年06月26日</CopyrightDate>
+        </Copyright>
+        <UsageRights>
+          <Limitations xml:lang="ja-JP">契約内容以外の使用を禁ずる。</Limitations>
+        </UsageRights>
+      </RightsMetadata>
+      <DescriptiveMetadata>
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <Language FormalName="ja" Scheme="ISO639"/>
+        <SubjectCode>
+          <Subject FormalName="05000000" Scheme="IptcSubjectCodes"/>
+          <SubjectMatter FormalName="05990000" Scheme="IptcSubjectCodes"/>
+        </SubjectCode>
+        <SubjectCode>
+          <Subject FormalName="03000000" Scheme="IptcSubjectCodes"/>
+          <SubjectMatter FormalName="03010000" Scheme="IptcSubjectCodes"/>
+          <SubjectDetail FormalName="03010001" Scheme="IptcSubjectCodes"/>
+        </SubjectCode>
+        <SubjectCode>
+          <Subject FormalName="13000000" Scheme="IptcSubjectCodes"/>
+          <SubjectMatter FormalName="13022000" Scheme="IptcSubjectCodes"/>
+        </SubjectCode>
+        <SubjectCode>
+          <Subject FormalName="02000000" Scheme="IptcSubjectCodes"/>
+          <SubjectMatter FormalName="02001000" Scheme="IptcSubjectCodes"/>
+        </SubjectCode>
+        <SubjectCode>
+          <Subject FormalName="07000000" Scheme="IptcSubjectCodes"/>
+          <SubjectMatter FormalName="07990000" Scheme="IptcSubjectCodes"/>
+        </SubjectCode>
+      </DescriptiveMetadata>
+      <Metadata>
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <MetadataType FormalName="NskAreaInformation" Scheme="NskMetadataTypes"/>
+        <Property FormalName="NskRelevantArea" Scheme="NskProperty">
+          <Property FormalName="NskCountry" Scheme="NskProperty" Value="CHN"/>
+        </Property>
+      </Metadata>
+      <Metadata>
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <MetadataType FormalName="CorporationInfo/NewsBrandInfo/NewsGenreInfo" Scheme="NewsCMetadataTypes"/>
+        <Property FormalName="NewsBrandInfo" Scheme="NewsCProperty">
+          <Property FormalName="NewsBrand" Scheme="NewsCProperty" Value="COMPACTNEWS"/>
+        </Property>
+        <Property FormalName="NewsGenreInfo" Scheme="NewsCProperty">
+          <Property FormalName="World" Scheme="NewsCProperty">
+            <Property FormalName="NewsGenre" Scheme="NewsCProperty" Value="world"/>
+          </Property>
+        </Property>
+      </Metadata>
+      <Metadata>
+        <MetadataType FormalName="GroupId" Scheme="NewsCMetadataTypes"/>
+        <Property FormalName="GroupId" Scheme="NewsCProperty" Value="20250626DH___0395500022"/>
+      </Metadata>
+      <ContentItem Duid="CI0001">
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <MediaType FormalName="Text" Scheme="IptcMediaTypes"/>
+        <Format FormalName="NewsTextv1.0" Scheme="NewsCFormats"/>
+        <MimeType FormalName="text/xml" Scheme="IptcMimeTypes"/>
+        <DataContent>
+          <news.catalog Href="../catalogNewsC/catalog.NewsCNewsTextCatalogv1.0.xml"/>
+          <newstext version="1.0" xml:space="preserve">
+            <body Duid="BD0001">
+              <news.content Duid="CO0001">
+                <p>　【北京共同】中国北京市密雲区の小学校近くの交差点で２６日、小型車が通行人をはね、けが人が病院に運ばれた。地元警察当局が発表した。インターネット上には現場とされる動画が拡散。子どもとみられる数人が倒れているのが写っていた。</p>
+                <p>　中国では社会への不満を持つ人による無差別殺傷が多発。学校周辺で車が暴走して子どもが巻き込まれる事件が次々と起きている。</p>
+                <p>　警察当局は小型車に乗っていたのは３５歳の男で「運転操作を誤ったのが原因」と発表したが、交流サイト（ＳＮＳ）には「本当に運転ミスなのか？」などと疑問を呈する投稿が相次いだ。</p>
+                <p>　現場はマンションが並ぶ住宅街。近くにいた高齢男性は「小学１年生が被害に遭ったと聞いた。児童の列に突っ込んだようで、故意に起こした事件だと思う」と話した。</p>
+                <p>　周辺には治安当局者らが多数配置され、現場を撮影しないよう住民らに促した。中国当局は社会不安が広がるのを懸念し、突発的な事件の情報統制を強めている。</p>
+              </news.content>
+            </body>
+          </newstext>
+        </DataContent>
+      </ContentItem>
+    </NewsComponent>
+  </NewsItem>
+</NewsML>

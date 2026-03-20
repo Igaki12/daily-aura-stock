@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE NewsML PUBLIC "urn:newsml:iptc.org:20001006:NewsMLv1.0.dtd:1" "../DTD/NewsMLv1.0.dtd" [
+	<!ENTITY % NewsTextv1.0.dtd SYSTEM "../DTD/NewsTextv1.0.dtd">
+	%NewsTextv1.0.dtd;
+]>
+<NewsML>
+  <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+  <NewsEnvelope>
+    <TransmissionId>2025062301001164:20250623T162811+0900</TransmissionId>
+    <SentFrom>
+      <Party FormalName="KYODONEWS" Scheme="NskParty"/>
+    </SentFrom>
+    <SentTo>
+      <Party FormalName="47NewsSDB-NewsPack" Scheme="NskTiffServiceId"/>
+    </SentTo>
+    <DateAndTime>20250623T162811+0900</DateAndTime>
+    <NewsService FormalName="NewsContainer" Scheme="NewsCNewsPack"/>
+    <NewsService FormalName="NewsPack" Scheme="NewsCNewsPack"/>
+    <NewsService FormalName="CompactNews" Scheme="NewsCNewsPack"/>
+    <NewsProduct FormalName="NskNewsML:1" Scheme="NskNewsProduct"/>
+    <Priority FormalName="5" Scheme="IptcPriority"/>
+  </NewsEnvelope>
+  <NewsItem Duid="NI0001" xml:lang="ja-JP">
+    <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+    <Identification>
+      <NewsIdentifier>
+        <ProviderId>kyodonews.jp</ProviderId>
+        <DateId>20250623</DateId>
+        <NewsItemId>2025062301001164</NewsItemId>
+        <RevisionId PreviousRevision="1" Update="N">2</RevisionId>
+        <PublicIdentifier>urn:newsml:kyodonews.jp:20250623:2025062301001164:2</PublicIdentifier>
+      </NewsIdentifier>
+    </Identification>
+    <NewsManagement>
+      <NewsItemType FormalName="News" Scheme="IptcNewsItemType"/>
+      <FirstCreated>20250623T154605+0900</FirstCreated>
+      <ThisRevisionCreated>20250623T162811+0900</ThisRevisionCreated>
+      <Status FormalName="Usable" Scheme="IptcStatus"/>
+      <AssociatedWith NewsItem="urn:newsml:kyodonews.jp:20250623:2025062301001188">
+        <Comment xml:lang="ja-JP">五輪談合、７社に課徴金３３億円</Comment>
+      </AssociatedWith>
+      <Instruction FormalName="CancelAll" Scheme="NewsCInstruction">
+        <RevisionStatus>
+          <Status FormalName="Canceled" Scheme="IptcStatus"/>
+        </RevisionStatus>
+      </Instruction>
+    </NewsManagement>
+    <NewsComponent Duid="NC0001" EquivalentsList="no" Essential="no" xml:lang="ja-JP">
+      <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+      <Role FormalName="Main" Scheme="IptcRole"/>
+      <NewsLines>
+        <HeadLine>五輪談合、７社に課徴金３３億円</HeadLine>
+        <SubHeadLine>独禁法違反で排除措置も、公取委</SubHeadLine>
+        <CreditLine>KYODONEWS</CreditLine>
+        <CopyrightLine>(c)KYODONEWS</CopyrightLine>
+        <RightsLine>契約内容以外の使用を禁ずる。</RightsLine>
+      </NewsLines>
+      <AdministrativeMetadata>
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <Provider>
+          <Party FormalName="KYODONEWS" Scheme="NskParty"/>
+        </Provider>
+        <Creator>
+          <Party FormalName="KYODONEWS" Scheme="NskParty"/>
+        </Creator>
+      </AdministrativeMetadata>
+      <RightsMetadata>
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <Copyright>
+          <CopyrightHolder xml:lang="en-GB">KYODONEWS</CopyrightHolder>
+          <CopyrightDate xml:lang="ja-JP">2025年06月23日</CopyrightDate>
+        </Copyright>
+        <UsageRights>
+          <Limitations xml:lang="ja-JP">契約内容以外の使用を禁ずる。</Limitations>
+        </UsageRights>
+      </RightsMetadata>
+      <DescriptiveMetadata>
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <Language FormalName="ja" Scheme="ISO639"/>
+        <SubjectCode>
+          <Subject FormalName="04000000" Scheme="IptcSubjectCodes"/>
+          <SubjectMatter FormalName="04010000" Scheme="IptcSubjectCodes"/>
+          <SubjectDetail FormalName="04010001" Scheme="IptcSubjectCodes"/>
+        </SubjectCode>
+        <SubjectCode>
+          <Subject FormalName="02000000" Scheme="IptcSubjectCodes"/>
+          <SubjectMatter FormalName="02006000" Scheme="IptcSubjectCodes"/>
+        </SubjectCode>
+        <SubjectCode>
+          <Subject FormalName="02000000" Scheme="IptcSubjectCodes"/>
+          <SubjectMatter FormalName="02001000" Scheme="IptcSubjectCodes"/>
+        </SubjectCode>
+        <SubjectCode>
+          <Subject FormalName="11000000" Scheme="IptcSubjectCodes"/>
+          <SubjectMatter FormalName="11024000" Scheme="IptcSubjectCodes"/>
+        </SubjectCode>
+        <SubjectCode>
+          <Subject FormalName="04000000" Scheme="IptcSubjectCodes"/>
+          <SubjectMatter FormalName="04991000" Scheme="IptcSubjectCodes"/>
+        </SubjectCode>
+        <SubjectCode>
+          <Subject FormalName="04000000" Scheme="IptcSubjectCodes"/>
+          <SubjectMatter FormalName="04015000" Scheme="IptcSubjectCodes"/>
+          <SubjectDetail FormalName="04015002" Scheme="IptcSubjectCodes"/>
+        </SubjectCode>
+      </DescriptiveMetadata>
+      <Metadata>
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <MetadataType FormalName="NskAreaInformation" Scheme="NskMetadataTypes"/>
+        <Property FormalName="NskRelevantArea" Scheme="NskProperty">
+          <Property FormalName="NskCountry" Scheme="NskProperty" Value="JPN"/>
+          <Property FormalName="NskJpnAreaCode" Scheme="NskProperty" Value="13000"/>
+        </Property>
+      </Metadata>
+      <Metadata>
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <MetadataType FormalName="KyodoCorporationInfo" Scheme="KydMetadataTypes"/>
+        <Property FormalName="CorporationInfo" Scheme="KydProperty">
+          <Property FormalName="Corporation" Scheme="KydProperty">
+            <Property FormalName="StockCode" Scheme="KydProperty" Value="4324"/>
+            <Property FormalName="Market" Scheme="KydProperty" Value="東証プライム"/>
+            <Property FormalName="Name" Scheme="KydProperty" Value="電通グループ"/>
+          </Property>
+          <Property FormalName="Corporation" Scheme="KydProperty">
+            <Property FormalName="StockCode" Scheme="KydProperty" Value="9625"/>
+            <Property FormalName="Market" Scheme="KydProperty" Value="東証スタンダード"/>
+            <Property FormalName="Name" Scheme="KydProperty" Value="セレスポ"/>
+          </Property>
+          <Property FormalName="Corporation" Scheme="KydProperty">
+            <Property FormalName="StockCode" Scheme="KydProperty" Value="2433"/>
+            <Property FormalName="Market" Scheme="KydProperty" Value="東証プライム"/>
+            <Property FormalName="Name" Scheme="KydProperty" Value="博報堂ＤＹホールディングス"/>
+          </Property>
+          <Property FormalName="Corporation" Scheme="KydProperty">
+            <Property FormalName="StockCode" Scheme="KydProperty" Value="9005"/>
+            <Property FormalName="Market" Scheme="KydProperty" Value="東証プライム"/>
+            <Property FormalName="Name" Scheme="KydProperty" Value="東急"/>
+          </Property>
+        </Property>
+      </Metadata>
+      <Metadata>
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <MetadataType FormalName="CorporationInfo/NewsBrandInfo/NewsGenreInfo" Scheme="NewsCMetadataTypes"/>
+        <Property FormalName="NewsBrandInfo" Scheme="NewsCProperty">
+          <Property FormalName="NewsBrand" Scheme="NewsCProperty" Value="COMPACTNEWS"/>
+        </Property>
+        <Property FormalName="NewsGenreInfo" Scheme="NewsCProperty">
+          <Property FormalName="Main" Scheme="NewsCProperty">
+            <Property FormalName="NewsGenre" Scheme="NewsCProperty" Value="main"/>
+          </Property>
+          <Property FormalName="National" Scheme="NewsCProperty">
+            <Property FormalName="NewsGenre" Scheme="NewsCProperty" Value="national"/>
+          </Property>
+        </Property>
+      </Metadata>
+      <Metadata>
+        <MetadataType FormalName="GroupId" Scheme="NewsCMetadataTypes"/>
+        <Property FormalName="GroupId" Scheme="NewsCProperty" Value="20250603DH___0326600010"/>
+      </Metadata>
+      <ContentItem Duid="CI0001">
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <MediaType FormalName="Text" Scheme="IptcMediaTypes"/>
+        <Format FormalName="NewsTextv1.0" Scheme="NewsCFormats"/>
+        <MimeType FormalName="text/xml" Scheme="IptcMimeTypes"/>
+        <DataContent>
+          <news.catalog Href="../catalogNewsC/catalog.NewsCNewsTextCatalogv1.0.xml"/>
+          <newstext version="1.0" xml:space="preserve">
+            <body Duid="BD0001">
+              <news.content Duid="CO0001">
+                <p>　東京五輪・パラリンピックの大会運営事業を巡る談合事件で、公正取引委員会は２３日、広告最大手の電通グループなど計８社が受注調整したとする独禁法違反（不当な取引制限）を認定し、うち７社に計３３億２５９２万円の課徴金納付命令、７社に再発防止を求める排除措置命令を出した。</p>
+                <p>　公取委によると、８社は電通グループ、組織再編で事業を引き継いだ電通、広告会社の博報堂、東急エージェンシー、ＡＤＫマーケティング・ソリューションズ、イベント制作会社のセレスポ、フジクリエイティブコーポレーション、セイムトゥー（全て東京）。</p>
+                <p>　公取委の認定では、８社は２０１８年４月までに、大会組織委員会の発注で一般競争入札となったテスト大会の計画立案業務や、随意契約の実施業務と本大会運営業務で、組織委大会運営局元次長や電通グループを中心に受注予定企業を事前に決めることで合意。これに基づき受注調整した。契約総額は計約４３７億円だった。</p>
+                <p>　課徴金は、セレスポ１１億６３１９万円、電通グループ４億９５５６万円、博報堂４億９４４８万円など。</p>
+              </news.content>
+            </body>
+          </newstext>
+        </DataContent>
+      </ContentItem>
+    </NewsComponent>
+  </NewsItem>
+</NewsML>

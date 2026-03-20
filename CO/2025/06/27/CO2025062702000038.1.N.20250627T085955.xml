@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE NewsML PUBLIC "urn:newsml:iptc.org:20001006:NewsMLv1.0.dtd:1" "../DTD/NewsMLv1.0.dtd" [
+	<!ENTITY % NewsTextv1.0.dtd SYSTEM "../DTD/NewsTextv1.0.dtd">
+	%NewsTextv1.0.dtd;
+]>
+<NewsML>
+  <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+  <NewsEnvelope>
+    <TransmissionId>2025062702000038:20250627T085955+0900</TransmissionId>
+    <SentFrom>
+      <Party FormalName="KYODONEWS" Scheme="NskParty"/>
+    </SentFrom>
+    <SentTo>
+      <Party FormalName="47NewsSDB-NewsPack" Scheme="NskTiffServiceId"/>
+    </SentTo>
+    <DateAndTime>20250627T085955+0900</DateAndTime>
+    <NewsService FormalName="NewsContainer" Scheme="NewsCNewsPack"/>
+    <NewsService FormalName="NewsPack" Scheme="NewsCNewsPack"/>
+    <NewsService FormalName="CompactNews" Scheme="NewsCNewsPack"/>
+    <NewsProduct FormalName="NskNewsML:1" Scheme="NskNewsProduct"/>
+    <Priority FormalName="5" Scheme="IptcPriority"/>
+  </NewsEnvelope>
+  <NewsItem Duid="NI0001" xml:lang="ja-JP">
+    <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+    <Identification>
+      <NewsIdentifier>
+        <ProviderId>kyodonews.jp</ProviderId>
+        <DateId>20250627</DateId>
+        <NewsItemId>2025062702000038</NewsItemId>
+        <RevisionId PreviousRevision="0" Update="N">1</RevisionId>
+        <PublicIdentifier>urn:newsml:kyodonews.jp:20250627:2025062702000038:1</PublicIdentifier>
+      </NewsIdentifier>
+    </Identification>
+    <NewsManagement>
+      <NewsItemType FormalName="News" Scheme="IptcNewsItemType"/>
+      <FirstCreated>20250627T085955+0900</FirstCreated>
+      <ThisRevisionCreated>20250627T085955+0900</ThisRevisionCreated>
+      <Status FormalName="Usable" Scheme="IptcStatus"/>
+      <Instruction FormalName="CancelAll" Scheme="NewsCInstruction">
+        <RevisionStatus>
+          <Status FormalName="Canceled" Scheme="IptcStatus"/>
+        </RevisionStatus>
+      </Instruction>
+    </NewsManagement>
+    <NewsComponent Duid="NC0001" EquivalentsList="no" Essential="no" xml:lang="ja-JP">
+      <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+      <Role FormalName="Main" Scheme="IptcRole"/>
+      <NewsLines>
+        <HeadLine>震度＝気象庁発表（２７日８時５９分）　：地震（小規模）</HeadLine>
+        <CreditLine>KYODONEWS</CreditLine>
+        <CopyrightLine>(c)KYODONEWS</CopyrightLine>
+        <RightsLine>契約内容以外の使用を禁ずる。</RightsLine>
+      </NewsLines>
+      <AdministrativeMetadata>
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <Provider>
+          <Party FormalName="KYODONEWS" Scheme="NskParty"/>
+        </Provider>
+        <Creator>
+          <Party FormalName="KYODONEWS" Scheme="NskParty"/>
+        </Creator>
+      </AdministrativeMetadata>
+      <RightsMetadata>
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <Copyright>
+          <CopyrightHolder xml:lang="en-GB">KYODONEWS</CopyrightHolder>
+          <CopyrightDate xml:lang="ja-JP">2025年06月27日</CopyrightDate>
+        </Copyright>
+        <UsageRights>
+          <Limitations xml:lang="ja-JP">契約内容以外の使用を禁ずる。</Limitations>
+        </UsageRights>
+      </RightsMetadata>
+      <DescriptiveMetadata>
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <Language FormalName="ja" Scheme="ISO639"/>
+        <SubjectCode>
+          <Subject FormalName="17000000" Scheme="IptcSubjectCodes"/>
+          <SubjectMatter FormalName="17003000" Scheme="IptcSubjectCodes"/>
+        </SubjectCode>
+      </DescriptiveMetadata>
+      <Metadata>
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <MetadataType FormalName="CorporationInfo/NewsBrandInfo/NewsGenreInfo" Scheme="NewsCMetadataTypes"/>
+        <Property FormalName="NewsBrandInfo" Scheme="NewsCProperty">
+          <Property FormalName="NewsBrand" Scheme="NewsCProperty" Value="COMPACTNEWS"/>
+        </Property>
+        <Property FormalName="NewsGenreInfo" Scheme="NewsCProperty">
+          <Property FormalName="Earthquake/Tsunami/Volcano" Scheme="NewsCProperty">
+            <Property FormalName="NewsGenre" Scheme="NewsCProperty" Value="earthquake"/>
+          </Property>
+        </Property>
+      </Metadata>
+      <ContentItem Duid="CI0001">
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <MediaType FormalName="Text" Scheme="IptcMediaTypes"/>
+        <Format FormalName="NewsTextv1.0" Scheme="NewsCFormats"/>
+        <MimeType FormalName="text/xml" Scheme="IptcMimeTypes"/>
+        <DataContent>
+          <news.catalog Href="../catalogNewsC/catalog.NewsCNewsTextCatalogv1.0.xml"/>
+          <newstext version="1.0" xml:space="preserve">
+            <body Duid="BD0001">
+              <news.content Duid="CO0001">
+                <p>　２７日午前８時５６分ごろ地震がありました。</p>
+                <p>　気象庁によると、震源地は茨城県北部北緯３６．５度、東経１４０．６度で、震源の深さは約６０キロ。</p>
+                <p>　地震の規模はマグニチュード（Ｍ）４．４と推定される。</p>
+                <p>　各地の震度は次の通り。</p>
+                <p>　震度３＝白河新白河、白河東、矢祭、玉川（福島）水戸、水戸千波、水戸内原、水戸栗崎、日立助川、日立十王、土浦、土浦田中、石岡柿岡、常陸太田高柿、笠間石井、笠間、取手寺田、つくば、ひたちなか、守谷、常陸大宮北町、常陸大宮山方、常陸大宮御前山、那珂瓜連、筑西門井、かすみがうら、かすみがうら上土田、桜川岩瀬、桜川真壁、桜川羽田、小美玉小川、城里、東海村、大子（茨城）真岡田町、大田原湯津上、益子、茂木、市貝、芳賀、壬生、那珂川小川（栃木）▽震度２＝郡山開成、いわき錦、白河、白河表郷、白河大信、白河市役所、須賀川八幡山、須賀川岩瀬、須賀川、田村、田村大越、田村滝根、鏡石、天栄村湯本支所、檜枝岐上河原、西郷、泉崎、中島、棚倉、棚倉館ケ丘、矢祭戸塚、塙、石川、浅川、古殿、小野中通（福島）日立、土浦藤沢、古河仁連、石岡若宮、石岡八郷、石岡、結城、龍ケ崎、下妻、下妻鬼怒、常総新石下、常総市役所、常陸太田、常陸太田町田、常陸太田金井、常陸太田大中、高萩安良川、北茨城、北茨城中郷、笠間中央、笠間下郷、取手、牛久、つくば天王台、つくば小茎、ひたちなか南神敷台、鹿嶋、鹿嶋宮中、常陸大宮、常陸大宮高部、常陸大宮緒川、那珂、筑西、筑西海老ケ島、筑西二木成、坂東馬立、坂東山、坂東市役所、稲敷江戸崎、稲敷市役所、稲敷伊佐津、行方玉造、行方麻生、鉾田、鉾田汲上、鉾田造谷、つくばみらい加藤、つくばみらい福田、小美玉堅倉、小美玉上玉里、茨城、大洗、城里阿波山、城里徳蔵、美浦、阿見、八千代、五霞、境（茨城）宇都宮、宇都宮旭、宇都宮中里、宇都宮中岡本、足利大正、栃木、栃木藤岡、栃木岩舟、佐野葛生東、佐野、鹿沼晃望台、鬼怒川温泉、日光芹沼、日光市役所藤原庁舎、日光黒部、小山神鳥谷、真岡、真岡石島、大田原黒羽田、大田原、那須塩原鍋掛、那須塩原市役所、那須塩原あたご、那須塩原塩原庁舎、さくら、さくら喜連川、那須烏山大金、那須烏山市役所、下野田中、下野笹原、下野大松山、茂木北高岡、塩谷、高根沢、那須、那珂川馬頭（栃木）桐生元宿、桐生黒保根、伊勢崎、伊勢崎西久保、太田西本町、太田、館林上三林、渋川赤城、片品鎌田、板倉、大泉（群馬）熊谷江南、東松山、春日部粕壁、春日部金崎、羽生、久喜、幸手、嵐山、宮代（埼玉）市川大町、野田、野田東宝珠花、成田名古屋、柏、柏市役所、柏大島田、八千代、我孫子、鎌ケ谷、白井（千葉）大手町、江古田、豊玉北（東京）▽震度１＝岩沼（宮城）郡山、小名浜、双葉（福島）古河、潮来（茨城）日光（栃木）前橋、高崎、桐生、沼田、沼田尾瀬高校（群馬）さいたま、川越、熊谷、秩父（埼玉）東金（千葉）世田谷、江戸川、日野（東京）川崎（神奈川）など</p>
+                <p>　この地震による津波の心配はありません。</p>
+              </news.content>
+            </body>
+          </newstext>
+        </DataContent>
+      </ContentItem>
+    </NewsComponent>
+  </NewsItem>
+</NewsML>

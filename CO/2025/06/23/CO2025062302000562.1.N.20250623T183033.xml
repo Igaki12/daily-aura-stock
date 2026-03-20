@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE NewsML PUBLIC "urn:newsml:iptc.org:20001006:NewsMLv1.0.dtd:1" "../DTD/NewsMLv1.0.dtd" [
+	<!ENTITY % NewsTextv1.0.dtd SYSTEM "../DTD/NewsTextv1.0.dtd">
+	%NewsTextv1.0.dtd;
+]>
+<NewsML>
+  <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+  <NewsEnvelope>
+    <TransmissionId>2025062302000562:20250623T183033+0900</TransmissionId>
+    <SentFrom>
+      <Party FormalName="KYODONEWS" Scheme="NskParty"/>
+    </SentFrom>
+    <SentTo>
+      <Party FormalName="47NewsSDB-NewsPack" Scheme="NskTiffServiceId"/>
+    </SentTo>
+    <DateAndTime>20250623T183033+0900</DateAndTime>
+    <NewsService FormalName="NewsContainer" Scheme="NewsCNewsPack"/>
+    <NewsService FormalName="NewsPack" Scheme="NewsCNewsPack"/>
+    <NewsService FormalName="CompactNews" Scheme="NewsCNewsPack"/>
+    <NewsProduct FormalName="NskNewsML:1" Scheme="NskNewsProduct"/>
+    <Priority FormalName="5" Scheme="IptcPriority"/>
+  </NewsEnvelope>
+  <NewsItem Duid="NI0001" xml:lang="ja-JP">
+    <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+    <Identification>
+      <NewsIdentifier>
+        <ProviderId>kyodonews.jp</ProviderId>
+        <DateId>20250623</DateId>
+        <NewsItemId>2025062302000562</NewsItemId>
+        <RevisionId PreviousRevision="0" Update="N">1</RevisionId>
+        <PublicIdentifier>urn:newsml:kyodonews.jp:20250623:2025062302000562:1</PublicIdentifier>
+      </NewsIdentifier>
+    </Identification>
+    <NewsManagement>
+      <NewsItemType FormalName="News" Scheme="IptcNewsItemType"/>
+      <FirstCreated>20250623T183033+0900</FirstCreated>
+      <ThisRevisionCreated>20250623T183033+0900</ThisRevisionCreated>
+      <Status FormalName="Usable" Scheme="IptcStatus"/>
+      <Instruction FormalName="CancelAll" Scheme="NewsCInstruction">
+        <RevisionStatus>
+          <Status FormalName="Canceled" Scheme="IptcStatus"/>
+        </RevisionStatus>
+      </Instruction>
+    </NewsManagement>
+    <NewsComponent Duid="NC0001" EquivalentsList="no" Essential="no" xml:lang="ja-JP">
+      <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+      <Role FormalName="Main" Scheme="IptcRole"/>
+      <NewsLines>
+        <HeadLine>火山情報＝福岡管区気象台　　鹿児島地方気象台発表（２３日１８時３０分）</HeadLine>
+        <CreditLine>KYODONEWS</CreditLine>
+        <CopyrightLine>(c)KYODONEWS</CopyrightLine>
+        <RightsLine>契約内容以外の使用を禁ずる。</RightsLine>
+      </NewsLines>
+      <AdministrativeMetadata>
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <Provider>
+          <Party FormalName="KYODONEWS" Scheme="NskParty"/>
+        </Provider>
+        <Creator>
+          <Party FormalName="KYODONEWS" Scheme="NskParty"/>
+        </Creator>
+      </AdministrativeMetadata>
+      <RightsMetadata>
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <Copyright>
+          <CopyrightHolder xml:lang="en-GB">KYODONEWS</CopyrightHolder>
+          <CopyrightDate xml:lang="ja-JP">2025年06月23日</CopyrightDate>
+        </Copyright>
+        <UsageRights>
+          <Limitations xml:lang="ja-JP">契約内容以外の使用を禁ずる。</Limitations>
+        </UsageRights>
+      </RightsMetadata>
+      <DescriptiveMetadata>
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <Language FormalName="ja" Scheme="ISO639"/>
+        <SubjectCode>
+          <Subject FormalName="17000000" Scheme="IptcSubjectCodes"/>
+          <SubjectMatter FormalName="17003000" Scheme="IptcSubjectCodes"/>
+        </SubjectCode>
+      </DescriptiveMetadata>
+      <Metadata>
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <MetadataType FormalName="CorporationInfo/NewsBrandInfo/NewsGenreInfo" Scheme="NewsCMetadataTypes"/>
+        <Property FormalName="NewsBrandInfo" Scheme="NewsCProperty">
+          <Property FormalName="NewsBrand" Scheme="NewsCProperty" Value="COMPACTNEWS"/>
+        </Property>
+        <Property FormalName="NewsGenreInfo" Scheme="NewsCProperty">
+          <Property FormalName="Earthquake/Tsunami/Volcano" Scheme="NewsCProperty">
+            <Property FormalName="NewsGenre" Scheme="NewsCProperty" Value="volcano"/>
+          </Property>
+        </Property>
+      </Metadata>
+      <ContentItem Duid="CI0001">
+        <Catalog Href="../catalogNewsC/catalog.NewsCMasterCatalogv1.0.xml"/>
+        <MediaType FormalName="Text" Scheme="IptcMediaTypes"/>
+        <Format FormalName="NewsTextv1.0" Scheme="NewsCFormats"/>
+        <MimeType FormalName="text/xml" Scheme="IptcMimeTypes"/>
+        <DataContent>
+          <news.catalog Href="../catalogNewsC/catalog.NewsCNewsTextCatalogv1.0.xml"/>
+          <newstext version="1.0" xml:space="preserve">
+            <body Duid="BD0001">
+              <news.content Duid="CO0001">
+                <p>　火山名　霧島山（新燃岳）　噴火警報（火口周辺）</p>
+                <p>　２０２５年６月２３日１８時３０分　福岡管区気象台　　鹿児島地方気象台発表</p>
+                <p>　</p>
+                <p>＊＊（見出し）＊＊</p>
+                <p>　＜霧島山（新燃岳）に火口周辺警報（噴火警戒レベル３、入山規制）を発表＞</p>
+                <p>　新燃岳火口から概ね３キロメートルの範囲では、大きな噴石などに警戒してください。</p>
+                <p>　＜噴火警戒レベルを２（火口周辺規制）から３（入山規制）に引上げ＞</p>
+                <p>　</p>
+                <p>＊＊（本　文）＊＊</p>
+                <p>　</p>
+                <p>１．火山活動の状況及び予報警報事項</p>
+                <p>　ＧＮＳＳ連続観測では、霧島山を挟む一部の基線で、２０２５年３月頃から、霧島山深部の膨張を示すと考えられるわずかな伸びが認められます。</p>
+                <p>　本日（２３日）山麓で実施した現地調査では、火山ガス（二酸化硫黄）の１日あたりの放出量は４０００トン（前回５月１５日には検出されず）を観測し、急増していることを確認しました。</p>
+                <p>　新燃岳の火山活動はさらに高まった状態となっています。新燃岳火口から概ね３キロメートルの範囲では、大きな噴石などに警戒してください。</p>
+                <p>　</p>
+                <p>２．対象市町村等</p>
+                <p>　</p>
+                <p>　警報の種類　火口周辺警報：火口周辺警戒。</p>
+                <p>　警報の状況　継続。</p>
+                <p>　対象市町村　宮崎県：小林市</p>
+                <p>　対象市町村　鹿児島県：霧島市</p>
+                <p>　</p>
+                <p>　警報の種類　火口周辺警報：火口周辺警戒。</p>
+                <p>　警報の状況　発表。</p>
+                <p>　対象市町村　宮崎県：高原町</p>
+                <p>　</p>
+                <p>３．防災上の警戒事項等</p>
+                <p>　弾道を描いて飛散する大きな噴石が新燃岳火口から概ね３キロメートルまで、火砕流が概ね２キロメートルまで達する可能性があります。そのため、新燃岳火口から概ね３キロメートルの範囲では警戒してください。</p>
+                <p>　風下側では、火山灰だけでなく小さな噴石が遠方まで風に流されて降るおそれがあるため注意してください。</p>
+                <p>　２０１１年と同様に爆発に伴う大きな空振によって窓ガラスが割れるなどのおそれがあるため注意してください。</p>
+                <p>　地元自治体等の指示に従って危険な地域には立ち入らないでください。</p>
+                <p>　＊＊（参考：噴火警戒レベルの説明）＊＊</p>
+                <p>　【レベル５（避難）】：危険な居住地域からの避難等が必要。</p>
+                <p>　【レベル４（高齢者等避難）】：警戒が必要な居住地域での高齢者等の要配慮者の避難、住民の避難の準備等が必要。</p>
+                <p>　【レベル３（入山規制）】：登山禁止や入山規制等危険な地域への立入規制等。状況に応じて高齢者等の要配慮者の避難の準備等。</p>
+                <p>　【レベル２（火口周辺規制）】：火口周辺への立入規制等。</p>
+                <p>　【レベル１（活火山であることに留意）】：状況に応じて火口内への立入規制等。</p>
+                <p>　（注：避難や規制の対象地域は、地域の状況や火山活動状況により異なる）</p>
+              </news.content>
+            </body>
+          </newstext>
+        </DataContent>
+      </ContentItem>
+    </NewsComponent>
+  </NewsItem>
+</NewsML>
