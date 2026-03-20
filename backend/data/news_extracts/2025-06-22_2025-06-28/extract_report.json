@@ -1,0 +1,11 @@
+{
+  "input_root": "CO",
+  "start_date": "2025-06-22",
+  "end_date": "2025-06-28",
+  "raw_file_count": 2159,
+  "raw_record_count": 2159,
+  "current_record_count": 1693,
+  "daily_summary_count": 6,
+  "market_close_jst": "15:30:00",
+  "business_day_rule": "weekday_only"
+}
