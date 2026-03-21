@@ -30,6 +30,7 @@ export function App() {
   const [newsInput, setNewsInput] = useState("");
   const [summaryInput, setSummaryInput] = useState("");
   const [vectorInput, setVectorInput] = useState<number[]>([]);
+  const [vectorTextInput, setVectorTextInput] = useState("");
   const [ranking, setRanking] = useState<SimilarityResult[]>([]);
   const [logs, setLogs] = useState<ActivityLog[]>([]);
 
@@ -65,6 +66,16 @@ export function App() {
     setNewsInput(record.sampleHeadlines.join("\n"));
     setSummaryInput(record.summary);
     setVectorInput(record.embedding);
+    setVectorTextInput(
+      JSON.stringify(
+        {
+          vector_length: record.embedding.length,
+          values: record.embedding,
+        },
+        null,
+        2,
+      ),
+    );
   }
 
   const selectedRecord = useMemo(
@@ -157,10 +168,41 @@ export function App() {
       appendLog("info", "Gemini で 3072 次元埋め込みを生成します。");
       const values = await embedSummary(apiKeyState.value, summaryInput);
       setVectorInput(values);
+      setVectorTextInput(
+        JSON.stringify(
+          {
+            vector_length: values.length,
+            values,
+          },
+          null,
+          2,
+        ),
+      );
       appendLog("info", "埋め込み生成が完了しました。");
       setPipelineState("ranking");
     } catch (error) {
       appendLog("error", `埋め込み生成に失敗: ${String(error)}`);
+      setPipelineState("error");
+    }
+  }
+
+  function handleApplyVectorText() {
+    try {
+      const parsed = JSON.parse(vectorTextInput) as
+        | { values?: number[]; vector_length?: number }
+        | number[];
+      const values = Array.isArray(parsed) ? parsed : parsed.values ?? [];
+      if (!Array.isArray(values) || !values.length) {
+        throw new Error("values 配列が見つかりません。");
+      }
+      if (!values.every((value) => typeof value === "number")) {
+        throw new Error("values は数値配列である必要があります。");
+      }
+      setVectorInput(values);
+      appendLog("info", `貼り付けた埋め込みベクトルを適用しました。(${values.length} 次元)`);
+      setPipelineState("ranking");
+    } catch (error) {
+      appendLog("error", `埋め込み貼り付けの解析に失敗: ${String(error)}`);
       setPipelineState("error");
     }
   }
@@ -379,17 +421,44 @@ export function App() {
                   onClick={() => {
                     if (selectedRecord) {
                       setVectorInput(selectedRecord.embedding);
+                      setVectorTextInput(
+                        JSON.stringify(
+                          {
+                            vector_length: selectedRecord.embedding.length,
+                            values: selectedRecord.embedding,
+                          },
+                          null,
+                          2,
+                        ),
+                      );
                       appendLog("info", "保存済み埋め込みベクトルを復元しました。");
                     }
                   }}
                 >
                   保存済みベクトルを使う
                 </button>
+                <button
+                  type="button"
+                  className="ghost"
+                  onClick={handleApplyVectorText}
+                  disabled={!vectorTextInput.trim()}
+                >
+                  貼り付けたベクトルを適用
+                </button>
               </div>
             </div>
           }
           details={
             <div className="stack">
+              <label className="field">
+                <span>埋め込み JSON 貼り付け</span>
+                <textarea
+                  rows={10}
+                  value={vectorTextInput}
+                  onChange={(event) => setVectorTextInput(event.target.value)}
+                  placeholder={'{"vector_length":3072,"values":[0.001, ...]}'}
+                />
+              </label>
               <p>先頭 16 要素のプレビュー</p>
               <div className="vector-strip">
                 {vectorSummary.head.map((value, index) => (
