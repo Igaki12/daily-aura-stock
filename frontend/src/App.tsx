@@ -91,8 +91,13 @@ export function App() {
       return null;
     }
 
-    const top = ranking.slice(0, 3);
-    let weightSum = 0;
+    const highestScore = ranking[0]?.score;
+    if (highestScore === undefined) {
+      return null;
+    }
+
+    const top = ranking.filter((item) => item.score === highestScore);
+    let count = 0;
     let n225 = 0;
     let topix = 0;
 
@@ -104,19 +109,18 @@ export function App() {
       if (!record) {
         continue;
       }
-      const weight = Math.max(item.score, 0.0001);
-      weightSum += weight;
-      n225 += (record.market.n225PrevCloseChangePct ?? 0) * weight;
-      topix += (record.market.topixProxyPrevCloseChangePct ?? 0) * weight;
+      n225 += record.market.n225PrevCloseChangePct ?? 0;
+      topix += record.market.topixProxyPrevCloseChangePct ?? 0;
+      count += 1;
     }
 
-    if (!weightSum) {
+    if (!count) {
       return null;
     }
 
     return {
-      n225: n225 / weightSum,
-      topix: topix / weightSum,
+      n225: n225 / count,
+      topix: topix / count,
       references: top,
     };
   }, [demoData, ranking]);
@@ -535,8 +539,8 @@ export function App() {
             predicted ? (
               <div className="stack">
                 <p>
-                  上位 3 類似日のコサイン類似度を重みとして、当日騰落率の参考値を加重平均しています。
-                  投資判断用ではありません。
+                  最もコサイン類似度が高い営業日の当日騰落率をそのまま参考表示しています。
+                  同率 1 位が複数ある場合のみ、その営業日群の平均値を表示します。投資判断用ではありません。
                 </p>
                 <ul className="plain-list">
                   {predicted.references.map((item) => (
