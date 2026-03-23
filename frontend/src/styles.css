@@ -48,7 +48,7 @@ button {
 
 .hero {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: minmax(0, 1fr) 280px;
   gap: 20px;
   padding: 28px;
   background:
@@ -340,7 +340,7 @@ input {
   margin-top: 16px;
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 720px) {
   .hero,
   .dashboard-grid {
     grid-template-columns: 1fr;
