@@ -6,6 +6,8 @@ type SectionCardProps = {
   eyebrow?: string;
   summary: ReactNode;
   details: ReactNode;
+  tutorialId?: string;
+  className?: string;
 };
 
 export function SectionCard({
@@ -13,11 +15,16 @@ export function SectionCard({
   eyebrow,
   summary,
   details,
+  tutorialId,
+  className,
 }: SectionCardProps) {
   const [tab, setTab] = useState<"summary" | "details">("summary");
 
   return (
-    <section className="section-card">
+    <section
+      className={["section-card", className].filter(Boolean).join(" ")}
+      data-tutorial-id={tutorialId}
+    >
       <div className="section-head">
         <div>
           {eyebrow ? <p className="section-eyebrow">{eyebrow}</p> : null}

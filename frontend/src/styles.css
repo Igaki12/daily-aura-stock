@@ -95,6 +95,7 @@ button {
   position: absolute;
   top: 18px;
   right: 18px;
+  z-index: 6;
   width: 42px;
   height: 42px;
   display: grid;
@@ -186,6 +187,17 @@ button {
 .section-card {
   padding: 20px;
   box-shadow: var(--shadow);
+}
+
+.section-card.tutorial-target-active {
+  position: relative;
+  z-index: 31;
+  pointer-events: none;
+  box-shadow:
+    0 0 0 3px rgba(255, 255, 255, 0.88),
+    0 0 0 10px rgba(0, 95, 115, 0.18),
+    0 24px 60px rgba(20, 14, 10, 0.18);
+  animation: tutorial-target-pulse 420ms ease;
 }
 
 .section-head {
@@ -365,12 +377,67 @@ input {
 .tutorial-backdrop {
   position: fixed;
   inset: 0;
-  z-index: 30;
-  display: grid;
-  place-items: center;
-  padding: 20px;
+  z-index: 24;
   background: rgba(17, 12, 10, 0.58);
   animation: tutorial-fade-in 220ms ease;
+}
+
+.tutorial-panel {
+  position: fixed;
+  z-index: 32;
+  width: min(420px, calc(100vw - 32px));
+}
+
+.tutorial-panel.centered {
+  inset: 0;
+  margin: auto;
+  height: fit-content;
+}
+
+.tutorial-panel.desktop {
+  overflow: visible;
+}
+
+.tutorial-panel.desktop.side-right::before,
+.tutorial-panel.desktop.side-left::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 56px;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(0, 95, 115, 0.15), rgba(199, 96, 43, 0.65));
+  transform: translateY(-50%);
+  border-radius: 999px;
+  animation: tutorial-connector-in 280ms ease;
+}
+
+.tutorial-panel.desktop.side-right::after,
+.tutorial-panel.desktop.side-left::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  background: rgba(199, 96, 43, 0.78);
+  transform: translateY(-50%) rotate(45deg);
+  animation: tutorial-connector-in 280ms ease;
+}
+
+.tutorial-panel.desktop.side-right::before {
+  left: -54px;
+}
+
+.tutorial-panel.desktop.side-right::after {
+  left: -62px;
+}
+
+.tutorial-panel.desktop.side-left::before {
+  right: -54px;
+  background: linear-gradient(90deg, rgba(199, 96, 43, 0.65), rgba(0, 95, 115, 0.15));
+}
+
+.tutorial-panel.desktop.side-left::after {
+  right: -62px;
 }
 
 .tutorial-card {
@@ -473,17 +540,40 @@ input {
 @keyframes tutorial-slide-in {
   from {
     opacity: 0;
-    transform: translateY(8px);
+    transform: translateY(8px) scale(0.985);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes tutorial-target-pulse {
+  from {
+    transform: translateY(8px) scale(0.985);
+    opacity: 0.7;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes tutorial-connector-in {
+  from {
+    opacity: 0;
+    transform: translateY(-50%) scaleX(0.4);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-50%) scaleX(1);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .tutorial-backdrop,
-  .tutorial-content {
+  .tutorial-content,
+  .section-card.tutorial-target-active {
     animation: none;
   }
 }
@@ -514,6 +604,10 @@ input {
 
   .tutorial-card {
     padding: 20px;
+  }
+
+  .tutorial-panel {
+    width: min(100vw - 24px, 680px);
   }
 
   .tutorial-actions,

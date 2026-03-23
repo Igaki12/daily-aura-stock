@@ -22,7 +22,8 @@ const DATA_PATH = "./assets/data/demo-data.json";
 const TUTORIAL_STEPS = [
   {
     label: "Step 0",
-    title: "まず API キーの扱いを確認します",
+    title: "API 管理",
+    targetId: "step-0",
     body:
       "このデモでは Gemini API キーをページ表示後に入力し、ブラウザの localStorage にだけ保存します。API キーを設定すると Step 2 の再要約と Step 3 の再ベクトル化を実行できますが、キーはブラウザ上で扱われるため秘匿はできません。",
     hint:
@@ -30,7 +31,8 @@ const TUTORIAL_STEPS = [
   },
   {
     label: "Step 1",
-    title: "ニュース記事テキストを入力します",
+    title: "ニュース入力",
+    targetId: "step-1",
     body:
       "ここでは 1 営業日分のニュース記事や見出し集合を貼り付けます。既存サンプルの日付ボタンを押せば保存済みデータを読み込めるので、まずは実データの流れを確認し、その後に自由入力へ切り替える使い方ができます。",
     hint:
@@ -38,7 +40,8 @@ const TUTORIAL_STEPS = [
   },
   {
     label: "Step 2",
-    title: "日次サマリーでその日の空気感をまとめます",
+    title: "要約",
+    targetId: "step-2",
     body:
       "Step 2 では、その日のニュース全体を 1 本の文章に要約します。保存済みサマリーをそのまま使うこともでき、API キーがある場合は Gemini で再要約して、入力ニュースから新しい日次サマリーを生成できます。",
     hint:
@@ -46,7 +49,8 @@ const TUTORIAL_STEPS = [
   },
   {
     label: "Step 3",
-    title: "サマリーを 3072 次元ベクトルへ変換します",
+    title: "ベクトル化",
+    targetId: "step-3",
     body:
       "Step 3 では、保存済みベクトルを使う、Gemini でサマリーから埋め込みを生成する、または embedding.txt の JSON を貼り付けて適用する、という 3 通りの使い方ができます。ここで得られたベクトルが類似日検索の核になります。",
     hint:
@@ -54,7 +58,8 @@ const TUTORIAL_STEPS = [
   },
   {
     label: "Step 4",
-    title: "過去のどの日が似ているかを比較します",
+    title: "類似検索",
+    targetId: "step-4",
     body:
       "Step 4 では、入力ベクトルと保存済み営業日ベクトルとのコサイン類似度を計算し、ニュースの空気感が近い順にランキング表示します。ここを見ることで、どの日がもっとも近い日として選ばれたかを確認できます。",
     hint:
@@ -62,7 +67,8 @@ const TUTORIAL_STEPS = [
   },
   {
     label: "Step 5",
-    title: "最終的な参考株価変動を表示します",
+    title: "予想表示",
+    targetId: "step-5",
     body:
       "Step 5 では、最もコサイン類似度が高い営業日の当日騰落率を、そのまま参考値として表示します。もし 1 位が複数ある場合だけ、その同率 1 位の日々の平均値を出し、日経平均と TOPIX 連動 ETF の参考変動を示します。",
     hint:
@@ -77,7 +83,7 @@ function nowLabel(): string {
 export function App() {
   const [demoData, setDemoData] = useState<DemoData | null>(null);
   const [apiKeyState, setApiKeyState] = useState<ApiKeyState>({ value: "" });
-  const [isModalOpen, setIsModalOpen] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [isTutorialOpen, setIsTutorialOpen] = useState(false);
   const [tutorialStepIndex, setTutorialStepIndex] = useState(0);
   const [pipelineState, setPipelineState] = useState<PipelineState>("idle");
@@ -108,12 +114,13 @@ export function App() {
     const savedKey = window.localStorage.getItem(STORAGE_KEY) ?? "";
     if (savedKey) {
       setApiKeyState({ value: savedKey, savedAt: nowLabel() });
-      setIsModalOpen(false);
     }
 
     const tutorialCompleted = window.localStorage.getItem(TUTORIAL_STORAGE_KEY);
     if (!tutorialCompleted) {
       setIsTutorialOpen(true);
+    } else if (!savedKey) {
+      setIsModalOpen(true);
     }
   }, []);
 
@@ -298,9 +305,16 @@ export function App() {
   function handleCloseTutorial() {
     window.localStorage.setItem(TUTORIAL_STORAGE_KEY, "true");
     setIsTutorialOpen(false);
+    if (!apiKeyState.value) {
+      setIsModalOpen(true);
+    }
   }
 
   const vectorSummary = summarizeVector(vectorInput);
+  const activeTutorialTargetId =
+    isTutorialOpen && TUTORIAL_STEPS[tutorialStepIndex]
+      ? TUTORIAL_STEPS[tutorialStepIndex].targetId
+      : "";
 
   return (
     <div className="app-shell">
@@ -364,6 +378,8 @@ export function App() {
         <SectionCard
           title="API 管理"
           eyebrow="Step 0"
+          tutorialId="step-0"
+          className={activeTutorialTargetId === "step-0" ? "tutorial-target-active" : ""}
           summary={
             <div className="stack">
               <p>
@@ -399,6 +415,8 @@ export function App() {
         <SectionCard
           title="ニュース入力"
           eyebrow="Step 1"
+          tutorialId="step-1"
+          className={activeTutorialTargetId === "step-1" ? "tutorial-target-active" : ""}
           summary={
             <div className="stack">
               <label className="field">
@@ -446,6 +464,8 @@ export function App() {
         <SectionCard
           title="日次サマリー"
           eyebrow="Step 2"
+          tutorialId="step-2"
+          className={activeTutorialTargetId === "step-2" ? "tutorial-target-active" : ""}
           summary={
             <div className="stack">
               <label className="field">
@@ -486,6 +506,8 @@ export function App() {
         <SectionCard
           title="ベクトル"
           eyebrow="Step 3"
+          tutorialId="step-3"
+          className={activeTutorialTargetId === "step-3" ? "tutorial-target-active" : ""}
           summary={
             <div className="stack">
               <div className="metric-grid">
@@ -575,6 +597,8 @@ export function App() {
         <SectionCard
           title="ベクトル類似度ランキング"
           eyebrow="Step 4"
+          tutorialId="step-4"
+          className={activeTutorialTargetId === "step-4" ? "tutorial-target-active" : ""}
           summary={
             <div className="stack">
               {ranking.map((item, index) => (
@@ -610,6 +634,8 @@ export function App() {
         <SectionCard
           title="予想株価"
           eyebrow="Step 5"
+          tutorialId="step-5"
+          className={activeTutorialTargetId === "step-5" ? "tutorial-target-active" : ""}
           summary={
             predicted ? (
               <div className="metric-grid">
