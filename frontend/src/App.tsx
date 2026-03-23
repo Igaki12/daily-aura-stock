@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { ApiKeyModal } from "./components/ApiKeyModal";
 import { PipelineStatus } from "./components/PipelineStatus";
 import { SectionCard } from "./components/SectionCard";
+import { TutorialOverlay } from "./components/TutorialOverlay";
 import { embedSummary, generateSummary } from "./lib/gemini";
 import { formatDateLabel, formatNumber, formatPercent } from "./lib/format";
 import { cosineSimilarity, summarizeVector } from "./lib/vector";
@@ -15,7 +16,59 @@ import type {
 } from "./types";
 
 const STORAGE_KEY = "daily-aura-stock-gemini-api-key";
+const TUTORIAL_STORAGE_KEY = "daily-aura-stock-tutorial-completed";
 const DATA_PATH = "./assets/data/demo-data.json";
+
+const TUTORIAL_STEPS = [
+  {
+    label: "Step 0",
+    title: "まず API キーの扱いを確認します",
+    body:
+      "このデモでは Gemini API キーをページ表示後に入力し、ブラウザの localStorage にだけ保存します。API キーを設定すると Step 2 の再要約と Step 3 の再ベクトル化を実行できますが、キーはブラウザ上で扱われるため秘匿はできません。",
+    hint:
+      "初回は API 管理カードや入力モーダルを確認し、共用端末では保存しないことと、デモ用または制限付きキーを使うことを意識してください。",
+  },
+  {
+    label: "Step 1",
+    title: "ニュース記事テキストを入力します",
+    body:
+      "ここでは 1 営業日分のニュース記事や見出し集合を貼り付けます。既存サンプルの日付ボタンを押せば保存済みデータを読み込めるので、まずは実データの流れを確認し、その後に自由入力へ切り替える使い方ができます。",
+    hint:
+      "貼り付ける内容は 1 日分のニュース集合が基本です。本文付きでも見出し中心でも動きますが、日次の空気感が分かるまとまりにすると後段の結果が安定します。",
+  },
+  {
+    label: "Step 2",
+    title: "日次サマリーでその日の空気感をまとめます",
+    body:
+      "Step 2 では、その日のニュース全体を 1 本の文章に要約します。保存済みサマリーをそのまま使うこともでき、API キーがある場合は Gemini で再要約して、入力ニュースから新しい日次サマリーを生成できます。",
+    hint:
+      "このサマリーは次のベクトル化の元になるので、個別記事の羅列ではなく、その日の主要トピックと全体傾向が分かる文章になっていることが重要です。",
+  },
+  {
+    label: "Step 3",
+    title: "サマリーを 3072 次元ベクトルへ変換します",
+    body:
+      "Step 3 では、保存済みベクトルを使う、Gemini でサマリーから埋め込みを生成する、または embedding.txt の JSON を貼り付けて適用する、という 3 通りの使い方ができます。ここで得られたベクトルが類似日検索の核になります。",
+    hint:
+      "埋め込み JSON 貼り付け欄には `vector_length` と `values` を含む JSON をそのまま貼れます。適用すると、すぐにランキングと予想株価が更新されます。",
+  },
+  {
+    label: "Step 4",
+    title: "過去のどの日が似ているかを比較します",
+    body:
+      "Step 4 では、入力ベクトルと保存済み営業日ベクトルとのコサイン類似度を計算し、ニュースの空気感が近い順にランキング表示します。ここを見ることで、どの日がもっとも近い日として選ばれたかを確認できます。",
+    hint:
+      "ランキング上位の日は、主要ジャンルやサマリーも合わせて確認すると理解しやすくなります。単に数値だけでなく、どのようなニュース構成の日だったかが重要です。",
+  },
+  {
+    label: "Step 5",
+    title: "最終的な参考株価変動を表示します",
+    body:
+      "Step 5 では、最もコサイン類似度が高い営業日の当日騰落率を、そのまま参考値として表示します。もし 1 位が複数ある場合だけ、その同率 1 位の日々の平均値を出し、日経平均と TOPIX 連動 ETF の参考変動を示します。",
+    hint:
+      "これは投資判断用ではなく、ニュースの空気感が近い日に市場がどう動いたかを簡易に見るための指標です。処理ログと合わせて結果の流れを確認してください。",
+  },
+] as const;
 
 function nowLabel(): string {
   return new Date().toLocaleString("ja-JP");
@@ -25,6 +78,8 @@ export function App() {
   const [demoData, setDemoData] = useState<DemoData | null>(null);
   const [apiKeyState, setApiKeyState] = useState<ApiKeyState>({ value: "" });
   const [isModalOpen, setIsModalOpen] = useState(true);
+  const [isTutorialOpen, setIsTutorialOpen] = useState(false);
+  const [tutorialStepIndex, setTutorialStepIndex] = useState(0);
   const [pipelineState, setPipelineState] = useState<PipelineState>("idle");
   const [selectedDate, setSelectedDate] = useState<string>("");
   const [newsInput, setNewsInput] = useState("");
@@ -54,6 +109,11 @@ export function App() {
     if (savedKey) {
       setApiKeyState({ value: savedKey, savedAt: nowLabel() });
       setIsModalOpen(false);
+    }
+
+    const tutorialCompleted = window.localStorage.getItem(TUTORIAL_STORAGE_KEY);
+    if (!tutorialCompleted) {
+      setIsTutorialOpen(true);
     }
   }, []);
 
@@ -230,6 +290,16 @@ export function App() {
     appendLog("warn", "Gemini API キーを削除しました。");
   }
 
+  function handleOpenTutorial() {
+    setTutorialStepIndex(0);
+    setIsTutorialOpen(true);
+  }
+
+  function handleCloseTutorial() {
+    window.localStorage.setItem(TUTORIAL_STORAGE_KEY, "true");
+    setIsTutorialOpen(false);
+  }
+
   const vectorSummary = summarizeVector(vectorInput);
 
   return (
@@ -240,8 +310,29 @@ export function App() {
         onSave={handleSaveApiKey}
         onClose={() => setIsModalOpen(false)}
       />
+      <TutorialOverlay
+        isOpen={isTutorialOpen}
+        currentStep={tutorialStepIndex}
+        steps={[...TUTORIAL_STEPS]}
+        onClose={handleCloseTutorial}
+        onNext={() =>
+          setTutorialStepIndex((current) =>
+            Math.min(current + 1, TUTORIAL_STEPS.length - 1),
+          )
+        }
+        onPrev={() => setTutorialStepIndex((current) => Math.max(current - 1, 0))}
+      />
 
       <header className="hero">
+        <button
+          type="button"
+          className="tutorial-trigger"
+          onClick={handleOpenTutorial}
+          aria-label="操作チュートリアルを開く"
+          title="操作チュートリアル"
+        >
+          ?
+        </button>
         <div>
           <p className="kicker">DailyAuraStock / GitHub Pages Demo</p>
           <h1>ニュース日次 Aura から株価の参考変動を読むダッシュボード</h1>
